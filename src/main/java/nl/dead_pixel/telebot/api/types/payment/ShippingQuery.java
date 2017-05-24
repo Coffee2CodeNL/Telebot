@@ -3,9 +3,9 @@ package nl.dead_pixel.telebot.api.types.payment;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import nl.dead_pixel.telebot.api.types.chat.User;
 
+
 /**
- * Created by @iSDP
- * A Telegram Bot Library for Java
+ * The type Shipping query.
  */
 public class ShippingQuery {
     private String id;
@@ -15,37 +15,81 @@ public class ShippingQuery {
     @JsonProperty("shipping_address")
     private ShippingAddress shippingAddress;
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public String getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     * @return the id
+     */
     public ShippingQuery setId(String id) {
         this.id = id;
         return this;
     }
 
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
     public User getUser() {
         return user;
     }
 
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     * @return the user
+     */
     public ShippingQuery setUser(User user) {
         this.user = user;
         return this;
     }
 
+    /**
+     * Gets invoice payload.
+     *
+     * @return the invoice payload
+     */
     public String getInvoicePayload() {
         return invoicePayload;
     }
 
+    /**
+     * Sets invoice payload.
+     *
+     * @param invoicePayload the invoice payload
+     * @return the invoice payload
+     */
     public ShippingQuery setInvoicePayload(String invoicePayload) {
         this.invoicePayload = invoicePayload;
         return this;
     }
 
+    /**
+     * Gets shipping address.
+     *
+     * @return the shipping address
+     */
     public ShippingAddress getShippingAddress() {
         return shippingAddress;
     }
 
+    /**
+     * Sets shipping address.
+     *
+     * @param shippingAddress the shipping address
+     * @return the shipping address
+     */
     public ShippingQuery setShippingAddress(ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;

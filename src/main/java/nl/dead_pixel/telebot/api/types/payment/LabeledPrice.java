@@ -1,26 +1,48 @@
 package nl.dead_pixel.telebot.api.types.payment;
 
+
 /**
- * Created by @iSDP
- * A Telegram Bot Library for Java
+ * The type Labeled price.
  */
 public class LabeledPrice {
     private String label;
     private int amount;
 
+    /**
+     * Gets label.
+     *
+     * @return the label
+     */
     public String getLabel() {
         return label;
     }
 
+    /**
+     * Sets label.
+     *
+     * @param label the label
+     * @return the label
+     */
     public LabeledPrice setLabel(String label) {
         this.label = label;
         return this;
     }
 
+    /**
+     * Gets amount.
+     *
+     * @return the amount
+     */
     public int getAmount() {
         return amount;
     }
 
+    /**
+     * Sets amount.
+     *
+     * @param amount the amount
+     * @return the amount
+     */
     public LabeledPrice setAmount(int amount) {
         this.amount = amount;
         return this;

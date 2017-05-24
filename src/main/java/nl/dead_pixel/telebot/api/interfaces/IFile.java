@@ -1,7 +1,7 @@
 package nl.dead_pixel.telebot.api.interfaces;
 
+
 /**
- * Created by @iSDP
- * A Telegram Bot Library for Java
+ * The interface File.
  */
 public interface IFile {}

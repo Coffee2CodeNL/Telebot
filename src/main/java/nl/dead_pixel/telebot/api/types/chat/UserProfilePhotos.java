@@ -5,28 +5,50 @@ import nl.dead_pixel.telebot.api.types.files.PhotoSize;
 
 import java.util.List;
 
+
 /**
- * Created by @iSDP
- * A Telegram Bot Library for Java
+ * The type User profile photos.
  */
 public class UserProfilePhotos {
     @JsonProperty("total_count")
     private int totalCount;
     private List<List<PhotoSize>> photos;
 
+    /**
+     * Gets total count.
+     *
+     * @return the total count
+     */
     public int getTotalCount() {
         return totalCount;
     }
 
+    /**
+     * Sets total count.
+     *
+     * @param totalCount the total count
+     * @return the total count
+     */
     public UserProfilePhotos setTotalCount(int totalCount) {
         this.totalCount = totalCount;
         return this;
     }
 
+    /**
+     * Gets photos.
+     *
+     * @return the photos
+     */
     public List<List<PhotoSize>> getPhotos() {
         return photos;
     }
 
+    /**
+     * Sets photos.
+     *
+     * @param photos the photos
+     * @return the photos
+     */
     public UserProfilePhotos setPhotos(List<List<PhotoSize>> photos) {
         this.photos = photos;
         return this;

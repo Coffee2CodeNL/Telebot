@@ -8,9 +8,9 @@ import nl.dead_pixel.telebot.api.types.keyboard.helpers.CallbackQuery;
 import nl.dead_pixel.telebot.api.types.payment.PreCheckoutQuery;
 import nl.dead_pixel.telebot.api.types.payment.ShippingQuery;
 
+
 /**
- * Created by @iSDP
- * A Telegram Bot Library for Java
+ * The type Update.
  */
 public class Update {
     @JsonProperty("update_id")
@@ -33,86 +33,190 @@ public class Update {
     @JsonProperty("pre_checkout_query")
     private PreCheckoutQuery preCheckoutQuery;
 
+    /**
+     * Gets update id.
+     *
+     * @return the update id
+     */
     public int getUpdateId() {
         return updateId;
     }
 
+    /**
+     * Gets message.
+     *
+     * @return the message
+     */
     public Message getMessage() {
         return message;
     }
 
+    /**
+     * Sets message.
+     *
+     * @param message the message
+     * @return the message
+     */
     public Update setMessage(Message message) {
         this.message = message;
         return this;
     }
 
+    /**
+     * Gets edited message.
+     *
+     * @return the edited message
+     */
     public Message getEditedMessage() {
         return editedMessage;
     }
 
+    /**
+     * Sets edited message.
+     *
+     * @param editedMessage the edited message
+     * @return the edited message
+     */
     public Update setEditedMessage(Message editedMessage) {
         this.editedMessage = editedMessage;
         return this;
     }
 
+    /**
+     * Gets channel post.
+     *
+     * @return the channel post
+     */
     public Message getChannelPost() {
         return channelPost;
     }
 
+    /**
+     * Sets channel post.
+     *
+     * @param channelPost the channel post
+     * @return the channel post
+     */
     public Update setChannelPost(Message channelPost) {
         this.channelPost = channelPost;
         return this;
     }
 
+    /**
+     * Gets edited channel post.
+     *
+     * @return the edited channel post
+     */
     public Message getEditedChannelPost() {
         return editedChannelPost;
     }
 
+    /**
+     * Sets edited channel post.
+     *
+     * @param editedChannelPost the edited channel post
+     * @return the edited channel post
+     */
     public Update setEditedChannelPost(Message editedChannelPost) {
         this.editedChannelPost = editedChannelPost;
         return this;
     }
 
+    /**
+     * Gets inline query.
+     *
+     * @return the inline query
+     */
     public InlineQuery getInlineQuery() {
         return inlineQuery;
     }
 
+    /**
+     * Sets inline query.
+     *
+     * @param inlineQuery the inline query
+     * @return the inline query
+     */
     public Update setInlineQuery(InlineQuery inlineQuery) {
         this.inlineQuery = inlineQuery;
         return this;
     }
 
+    /**
+     * Gets chosen inline result.
+     *
+     * @return the chosen inline result
+     */
     public ChosenInlineResult getChosenInlineResult() {
         return chosenInlineResult;
     }
 
+    /**
+     * Sets chosen inline result.
+     *
+     * @param chosenInlineResult the chosen inline result
+     * @return the chosen inline result
+     */
     public Update setChosenInlineResult(ChosenInlineResult chosenInlineResult) {
         this.chosenInlineResult = chosenInlineResult;
         return this;
     }
 
+    /**
+     * Gets callback query.
+     *
+     * @return the callback query
+     */
     public CallbackQuery getCallbackQuery() {
         return callbackQuery;
     }
 
+    /**
+     * Sets callback query.
+     *
+     * @param callbackQuery the callback query
+     * @return the callback query
+     */
     public Update setCallbackQuery(CallbackQuery callbackQuery) {
         this.callbackQuery = callbackQuery;
         return this;
     }
 
+    /**
+     * Gets shipping query.
+     *
+     * @return the shipping query
+     */
     public ShippingQuery getShippingQuery() {
         return shippingQuery;
     }
 
+    /**
+     * Sets shipping query.
+     *
+     * @param shippingQuery the shipping query
+     * @return the shipping query
+     */
     public Update setShippingQuery(ShippingQuery shippingQuery) {
         this.shippingQuery = shippingQuery;
         return this;
     }
 
+    /**
+     * Gets pre checkout query.
+     *
+     * @return the pre checkout query
+     */
     public PreCheckoutQuery getPreCheckoutQuery() {
         return preCheckoutQuery;
     }
 
+    /**
+     * Sets pre checkout query.
+     *
+     * @param preCheckoutQuery the pre checkout query
+     * @return the pre checkout query
+     */
     public Update setPreCheckoutQuery(PreCheckoutQuery preCheckoutQuery) {
         this.preCheckoutQuery = preCheckoutQuery;
         return this;

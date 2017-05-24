@@ -1,15 +1,38 @@
 plugins {
     id "net.ltgt.apt" version "0.10"
     id "java"
+    id "idea"
+    id "checkstyle"
 }
 
 group 'nl.dead_pixel.telebot'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+idea{
+    project {
+        languageLevel = '1.8'
+    }
+    module {
+        downloadJavadoc = true // defaults to false
+        downloadSources = true
+    }
+}
+
+javadoc {
+    options.links("https://docs.oracle.com/javase/8/docs/api/")
+    options.links("http://reactivex.io/RxJava/2.x/javadoc/")
+    options.links("http://square.github.io/retrofit/2.x/retrofit/")
+    options.links("https://google.github.io/dagger/api/2.0/")
+    options.links("http://fasterxml.github.io/jackson-core/javadoc/2.8/")
+    options.links("http://fasterxml.github.io/jackson-annotations/javadoc/2.8/")
+    options.links("http://fasterxml.github.io/jackson-databind/javadoc/2.8/")
 }
 
 dependencies {
