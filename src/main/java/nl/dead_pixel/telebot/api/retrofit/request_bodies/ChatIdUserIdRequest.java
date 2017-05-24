@@ -15,8 +15,10 @@ public class ChatIdUserIdRequest {
     @JsonProperty("user_id")
     private final long userId;
 
-    private ChatIdUserIdRequest(Builder builder)
-    {
+    /**
+     * @param builder Builder instance, passed in the {@link Builder#create()} method
+     */
+    private ChatIdUserIdRequest(Builder builder) {
         this.chatId = builder.chatId;
         this.userId = builder.userId;
     }

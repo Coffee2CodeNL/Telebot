@@ -17,10 +17,13 @@ public class UserProfilePhotosRequest {
     final private Optional<Float> offset;
     final private Optional<Float> limit;
 
+    /**
+     * @param builder Builder instance, passed in the {@link Builder#create()} method
+     */
     private UserProfilePhotosRequest(Builder builder) {
         this.userId = builder.userId;
         this.offset = builder.offset.map(s -> builder.offset.get());
-        this.limit  = builder.limit.map(s -> builder.limit.get());
+        this.limit = builder.limit.map(s -> builder.limit.get());
     }
 
     /**

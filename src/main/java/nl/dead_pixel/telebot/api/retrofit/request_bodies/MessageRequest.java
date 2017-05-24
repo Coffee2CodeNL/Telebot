@@ -28,6 +28,9 @@ public class MessageRequest {
     private final Optional<IReplyMarkup> replyMarkup;
 
 
+    /**
+     * @param builder Builder instance, passed in the {@link Builder#create()} method
+     */
     private MessageRequest(Builder builder) {
         this.chatId = builder.chatId;
         this.text = builder.text;

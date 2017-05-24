@@ -6,7 +6,7 @@ import nl.dead_pixel.telebot.api.types.chat.Chat;
 import nl.dead_pixel.telebot.api.types.chat.Message;
 
 /**
- * ChatIdMessageIdRequest
+ * ChatIdMessageIdRequest.
  * <p>
  * A Request Body Object to serialize and send to the API.
  * Implements a Builder pattern.
@@ -29,8 +29,7 @@ public class ChatIdMessageIdRequest {
     /**
      * @param builder Builder instance, passed in the {@link Builder#create()} method
      */
-    private ChatIdMessageIdRequest(Builder builder)
-    {
+    private ChatIdMessageIdRequest(Builder builder) {
         this.chatId = builder.chatId;
         this.messageId = builder.messageId;
     }
@@ -66,7 +65,7 @@ public class ChatIdMessageIdRequest {
         }
 
         /**
-         * Set the Message ID of the message
+         * Set the Message ID of the message.
          *
          * @param messageId The numeric ID of a {@link Message }
          * @return {@link ChatIdMessageIdRequest.Builder }

@@ -1,8 +1,5 @@
 package nl.dead_pixel.telebot.api.types.misc;
 
-import nl.dead_pixel.telebot.api.interfaces.IResponseType;
-
-
 /**
  * The type Api response.
  *

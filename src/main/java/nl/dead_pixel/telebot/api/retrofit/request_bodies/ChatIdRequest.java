@@ -10,8 +10,20 @@ public class ChatIdRequest {
     @JsonProperty("chat_id")
     private Object chatId;
 
-    private ChatIdRequest(Long identifier) { this.chatId = identifier; }
+    /**
+     * @param identifier Numeric Chat ID
+     */
+    private ChatIdRequest(Long identifier) {
+        this.chatId = identifier;
+    }
 
+
+    /**
+     * @param identifier String Chat ID ({@code @username}
+     */
+    private ChatIdRequest(String identifier) {
+        this.chatId = identifier;
+    }
 
     /**
      * Sets unique id.
@@ -22,8 +34,6 @@ public class ChatIdRequest {
     public static ChatIdRequest setUniqueId(Long identifier) {
         return new ChatIdRequest(identifier);
     }
-
-    private ChatIdRequest(String identifier) { this.chatId = identifier; }
 
     /**
      * Sets channel username.
