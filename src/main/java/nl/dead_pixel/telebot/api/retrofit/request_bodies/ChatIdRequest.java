@@ -19,7 +19,7 @@ public class ChatIdRequest {
 
 
     /**
-     * @param identifier String Chat ID ({@code @username}
+     * @param identifier String Chat ID ({@code @username})
      */
     private ChatIdRequest(String identifier) {
         this.chatId = identifier;

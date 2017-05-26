@@ -42,8 +42,12 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-jackson:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    compile 'org.slf4j:slf4j-api:1.8.0-alpha2'
+    compile 'org.slf4j:slf4j-simple:1.8.0-alpha2'
     compile 'io.reactivex.rxjava2:rxjava:2.1.0'
     compile 'com.fasterxml.jackson.core:jackson-core:2.8.8'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.8'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.8.8'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.6.3'
 }

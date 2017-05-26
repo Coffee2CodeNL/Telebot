@@ -1,13 +1,18 @@
 package nl.dead_pixel.telebot.api.types.misc;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.List;
+
 /**
- * The type Api response.
+ * The type Update API response.
  *
- * @param <T> the type parameter
  */
-public class ApiResponse<T> {
+public class UpdateApiResponse {
+    @JsonProperty("ok")
     private Boolean ok;
-    private T result;
+    @JsonProperty("result")
+    private List<Update> updates;
 
     /**
      * Gets ok.
@@ -24,7 +29,7 @@ public class ApiResponse<T> {
      * @param ok the ok
      * @return the ok
      */
-    public ApiResponse setOk(Boolean ok) {
+    public UpdateApiResponse setOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
@@ -34,8 +39,8 @@ public class ApiResponse<T> {
      *
      * @return the result
      */
-    public T getResult() {
-        return result;
+    public List<Update> getUpdates() {
+        return updates;
     }
 
     /**
@@ -44,8 +49,8 @@ public class ApiResponse<T> {
      * @param result the result
      * @return the result
      */
-    public ApiResponse setResult(T result) {
-        this.result = result;
+    public UpdateApiResponse setUpdates(List<Update> updates) {
+        this.updates = updates;
         return this;
     }
 }

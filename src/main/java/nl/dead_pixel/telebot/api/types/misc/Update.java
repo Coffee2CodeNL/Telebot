@@ -15,6 +15,7 @@ import nl.dead_pixel.telebot.api.types.payment.ShippingQuery;
 public class Update {
     @JsonProperty("update_id")
     private int updateId;
+    @JsonProperty("message")
     private Message message;
     @JsonProperty("edited_message")
     private Message editedMessage;

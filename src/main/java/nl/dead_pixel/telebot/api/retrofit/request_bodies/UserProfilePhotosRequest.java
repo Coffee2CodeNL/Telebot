@@ -51,7 +51,7 @@ public class UserProfilePhotosRequest {
          * @return the offset
          */
         public Builder setOffset(Float offset) {
-            this.offset = Optional.ofNullable(offset);
+            this.offset = Optional.of(offset);
             return this;
         }
 
@@ -62,7 +62,7 @@ public class UserProfilePhotosRequest {
          * @return the limit
          */
         public Builder setLimit(Float limit) {
-            this.limit = Optional.ofNullable(limit);
+            this.limit = Optional.of(limit);
             return this;
         }
 

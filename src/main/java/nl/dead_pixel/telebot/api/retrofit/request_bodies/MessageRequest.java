@@ -1,5 +1,6 @@
 package nl.dead_pixel.telebot.api.retrofit.request_bodies;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
@@ -11,10 +12,12 @@ import java.util.Optional;
 /**
  * The type Message request.
  */
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonDeserialize(builder = MessageRequest.Builder.class)
 public class MessageRequest {
     @JsonProperty("chat_id")
     private final Object chatId;
+    @JsonProperty("text")
     private final String text;
     @JsonProperty("parse_mode")
     private final Optional<String> parseMode;
@@ -48,11 +51,11 @@ public class MessageRequest {
     public static class Builder {
         private final Object chatId;
         private final String text;
-        private Optional<String> parseMode;
-        private Optional<Boolean> disableWebPagePreview;
-        private Optional<Boolean> disableNotification;
-        private Optional<Long> replyToMessageId;
-        private Optional<IReplyMarkup> replyMarkup;
+        private Optional<String> parseMode = Optional.empty();
+        private Optional<Boolean> disableWebPagePreview = Optional.empty();
+        private Optional<Boolean> disableNotification = Optional.empty();
+        private Optional<Long> replyToMessageId = Optional.empty();
+        private Optional<IReplyMarkup> replyMarkup = Optional.empty();
 
         /**
          * Instantiates a new Builder.
@@ -83,7 +86,7 @@ public class MessageRequest {
          * @return the parse mode
          */
         public Builder setParseMode(String parseMode) {
-            this.parseMode = Optional.ofNullable(parseMode);
+            this.parseMode = Optional.of(parseMode);
             return this;
         }
 
@@ -94,7 +97,7 @@ public class MessageRequest {
          * @return the disable web page preview
          */
         public Builder setDisableWebPagePreview(Boolean disableWebPagePreview) {
-            this.disableWebPagePreview = Optional.ofNullable(disableWebPagePreview);
+            this.disableWebPagePreview = Optional.of(disableWebPagePreview);
             return this;
         }
 
@@ -105,7 +108,7 @@ public class MessageRequest {
          * @return the disable notification
          */
         public Builder setDisableNotification(Boolean disableNotification) {
-            this.disableNotification = Optional.ofNullable(disableNotification);
+            this.disableNotification = Optional.of(disableNotification);
             return this;
         }
 
@@ -116,7 +119,7 @@ public class MessageRequest {
          * @return the reply to message id
          */
         public Builder setReplyToMessageId(Long replyToMessageId) {
-            this.replyToMessageId = Optional.ofNullable(replyToMessageId);
+            this.replyToMessageId = Optional.of(replyToMessageId);
             return this;
         }
 
@@ -127,7 +130,7 @@ public class MessageRequest {
          * @return the reply markup
          */
         public Builder setReplyMarkup(IReplyMarkup replyMarkup) {
-            this.replyMarkup = Optional.ofNullable(replyMarkup);
+            this.replyMarkup = Optional.of(replyMarkup);
             return this;
         }
 

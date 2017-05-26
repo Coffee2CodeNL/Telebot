@@ -15,8 +15,11 @@ import java.util.List;
 public class Message {
     @JsonProperty("message_id")
     private int messageId;
+    @JsonProperty("from")
     private User from;
+    @JsonProperty("date")
     private int date;
+    @JsonProperty("chat")
     private Chat chat;
     @JsonProperty("forward_from")
     private User forwardFrom;
@@ -41,7 +44,7 @@ public class Message {
     private Voice voice;
     @JsonProperty("video_note")
     private VideoNote videoNote;
-    @JsonProperty("new_chat_member")
+    @JsonProperty("new_chat_members")
     private List<User> newChatMembers;
     private String caption;
     private Contact contact;

@@ -1,6 +1,7 @@
 package nl.dead_pixel.telebot.api.retrofit;
 
 import io.reactivex.Single;
+import nl.dead_pixel.telebot.api.Api;
 import nl.dead_pixel.telebot.api.retrofit.request_bodies.*;
 import nl.dead_pixel.telebot.api.types.chat.*;
 import nl.dead_pixel.telebot.api.types.misc.ApiResponse;
@@ -30,6 +31,14 @@ public interface TelegramBotApiService {
      */
     @POST("getMe")
     Single<ApiResponse<User>> getMe();
+
+    /**
+     * Send chat action single.
+     *
+     * @return the single
+     */
+    @POST("sendChatAction")
+    Single<ApiResponse<Message>> sendChatAction();
 
     /////////////////////////////////////////
     //// Administrative        Endpoints ////
@@ -78,6 +87,32 @@ public interface TelegramBotApiService {
     //// Message Updating      Endpoints ////
     /////////////////////////////////////////
 
+    /**
+     * Use this method to edit text and game messages sent by the bot or via the bot (for inline bots).
+     * On success, if edited message is sent by the bot, the edited Message is returned, otherwise True is returned.
+     *
+     * @param messageRequest a {@link MessageRequest} object
+     * @return {@link Single} Observable which will emit an {@link ApiResponse} object which wraps a {@link Object}
+     */
+    @POST("editMessageText")
+    Single<ApiResponse<Object>> editMessageText(@Body MessageRequest messageRequest);
+
+
+    /**
+     * Edit message caption single.
+     *
+     * @return the single
+     */
+    @POST("editMessageCaption")
+    Single<ApiResponse<Object>> editMessageCaption();
+
+    /**
+     * Edit message reply markup single.
+     *
+     * @return the single
+     */
+    @POST("editMessageReplyMarkup")
+    Single<ApiResponse<Object>> editMessageReplyMarkup();
 
     /////////////////////////////////////////
     //// Chat Information      Endpoints ////
@@ -133,7 +168,7 @@ public interface TelegramBotApiService {
      * Use this method to get a list of profile pictures for a user.
      * Returns a UserProfilePhotos object.
      *
-     * @param userProfilePhotosRequest a {@link UserProfilePhotosRequest} object generated with {@link UserProfilePhotosRequest.Builder#create()}  }
+     * @param userProfilePhotosRequest a {@link UserProfilePhotosRequest} object generated with {@link UserProfilePhotosRequest.Builder#create()}
      * @return {@link Single } Observable which will emit an {@link ApiResponse } containing a {@link UserProfilePhotos } object
      */
     @POST("getUserProfilePhotos")
@@ -146,10 +181,116 @@ public interface TelegramBotApiService {
     /**
      * Use this method to send text messages.
      * On success, the sent {@link Message} is returned.
+     * <p>
+     * For formatting options see: <a href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>
      *
      * @param messageRequest a {@link MessageRequest} object
      * @return On Success, returns a {@link Single} Observable which will emit an {@link ApiResponse} object which wraps the sent {@link Message} object
      */
     @POST("sendMessage")
     Single<ApiResponse<Message>> sendMessage(@Body MessageRequest messageRequest);
+
+    /**
+     * Use this method to forward messages of any kind.
+     * On success, the sent Message is returned.
+     *
+     * @param forwardRequest a {@link ForwardRequest} object
+     * @return On Success, returns a {@link Single} Observable which will emit an {@link ApiResponse} object which wraps the sent {@link Message} object
+     */
+    @POST("forwardMessage")
+    Single<ApiResponse<Message>> forwardMessage(@Body ForwardRequest forwardRequest);
+
+    /**
+     * Send photo single.
+     *
+     * @return the single
+     */
+    @POST("sendPhoto")
+    Single<ApiResponse<Message>> sendPhoto();
+
+    /**
+     * Send audio single.
+     *
+     * @return the single
+     */
+    @POST("sendAudio")
+    Single<ApiResponse<Message>> sendAudio();
+
+    /**
+     * Send document single.
+     *
+     * @return the single
+     */
+    @POST("sendDocument")
+    Single<ApiResponse<Message>> sendDocument();
+
+    /**
+     * Send sticker single.
+     *
+     * @return the single
+     */
+    @POST("sendSticker")
+    Single<ApiResponse<Message>> sendSticker();
+
+    /**
+     * Send video single.
+     *
+     * @return the single
+     */
+    @POST("sendVideo")
+    Single<ApiResponse<Message>> sendVideo();
+
+    /**
+     * Send voice single.
+     *
+     * @return the single
+     */
+    @POST("sendVoice")
+    Single<ApiResponse<Message>> sendVoice();
+
+    /**
+     * Send video note single.
+     *
+     * @return the single
+     */
+    @POST("sendVideoNote")
+    Single<ApiResponse<Message>> sendVideoNote();
+
+    /**
+     * Send location single.
+     *
+     * @return the single
+     */
+    @POST("sendLocation")
+    Single<ApiResponse<Message>> sendLocation();
+
+    /**
+     * Send venue single.
+     *
+     * @return the single
+     */
+    @POST("sendVenue")
+    Single<ApiResponse<Message>> sendVenue();
+
+    /**
+     * Send contact single.
+     *
+     * @return the single
+     */
+    @POST("sendContact")
+    Single<ApiResponse<Message>> sendContact();
+
+    /////////////////////////////////////////
+    //// Maintenance           Endpoints ////
+    /////////////////////////////////////////
+
+    /**
+     * Leave chat single.
+     *
+     * @return the single
+     */
+    @POST("leaveChat")
+    Single<ApiResponse<Boolean>> leaveChat();
+
+
 }
