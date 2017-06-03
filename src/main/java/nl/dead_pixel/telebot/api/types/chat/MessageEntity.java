@@ -6,8 +6,8 @@ package nl.dead_pixel.telebot.api.types.chat;
  */
 public class MessageEntity {
     private String type;
-    private int offset;
-    private int length;
+    private Long offset;
+    private Long length;
     private String url;
     private User user;
 
@@ -36,7 +36,7 @@ public class MessageEntity {
      *
      * @return the offset
      */
-    public int getOffset() {
+    public Long getOffset() {
         return offset;
     }
 
@@ -46,7 +46,7 @@ public class MessageEntity {
      * @param offset the offset
      * @return the offset
      */
-    public MessageEntity setOffset(int offset) {
+    public MessageEntity setOffset(Long offset) {
         this.offset = offset;
         return this;
     }
@@ -56,7 +56,7 @@ public class MessageEntity {
      *
      * @return the length
      */
-    public int getLength() {
+    public Long getLength() {
         return length;
     }
 
@@ -66,7 +66,7 @@ public class MessageEntity {
      * @param length the length
      * @return the length
      */
-    public MessageEntity setLength(int length) {
+    public MessageEntity setLength(Long length) {
         this.length = length;
         return this;
     }

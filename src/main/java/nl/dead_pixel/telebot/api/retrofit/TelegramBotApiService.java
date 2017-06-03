@@ -2,6 +2,8 @@ package nl.dead_pixel.telebot.api.retrofit;
 
 import io.reactivex.Single;
 import nl.dead_pixel.telebot.api.Api;
+import nl.dead_pixel.telebot.api.retrofit.answer_bodies.CallbackQueryAnswer;
+import nl.dead_pixel.telebot.api.retrofit.answer_bodies.InlineQueryAnswer;
 import nl.dead_pixel.telebot.api.retrofit.request_bodies.*;
 import nl.dead_pixel.telebot.api.types.chat.*;
 import nl.dead_pixel.telebot.api.types.misc.ApiResponse;
@@ -290,7 +292,21 @@ public interface TelegramBotApiService {
      * @return the single
      */
     @POST("leaveChat")
-    Single<ApiResponse<Boolean>> leaveChat();
+    Single<ApiResponse<Boolean>> leaveChat(@Body ChatIdRequest chatIdRequest);
+
+    /////////////////////////////////////////
+    //// Keyboard Callback     Endpoints ////
+    /////////////////////////////////////////
+
+    @POST("answerCallbackQuery")
+    Single<ApiResponse<Boolean>> answerCallbackQuery(@Body CallbackQueryAnswer callbackQueryAnswer);
+
+    /////////////////////////////////////////
+    //// Inline Mode           Endpoints ////
+    /////////////////////////////////////////
+
+    @POST("answerInlineQuery")
+    Single<ApiResponse<Boolean>> answerInlineQuery(@Body InlineQueryAnswer inlineQueryAnswer);
 
 
 }

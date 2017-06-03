@@ -13,7 +13,7 @@ public class Invoice {
     private String startParameter;
     private String currency;
     @JsonProperty("total_amount")
-    private int totalAmount;
+    private Long totalAmount;
 
     /**
      * Gets title.
@@ -100,7 +100,7 @@ public class Invoice {
      *
      * @return the total amount
      */
-    public int getTotalAmount() {
+    public Long getTotalAmount() {
         return totalAmount;
     }
 
@@ -110,7 +110,7 @@ public class Invoice {
      * @param totalAmount the total amount
      * @return the total amount
      */
-    public Invoice setTotalAmount(int totalAmount) {
+    public Invoice setTotalAmount(Long totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }

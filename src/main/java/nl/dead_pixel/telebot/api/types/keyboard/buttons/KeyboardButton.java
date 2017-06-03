@@ -9,9 +9,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KeyboardButton {
     private String text;
     @JsonProperty("request_contact")
-    private boolean requestContact;
+    private Boolean requestContact;
     @JsonProperty("request_location")
-    private boolean requestLocation;
+    private Boolean requestLocation;
 
     /**
      * Gets text.
@@ -34,11 +34,11 @@ public class KeyboardButton {
     }
 
     /**
-     * Is request contact boolean.
+     * Is request contact Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isRequestContact() {
+    public Boolean isRequestContact() {
         return requestContact;
     }
 
@@ -48,17 +48,17 @@ public class KeyboardButton {
      * @param requestContact the request contact
      * @return the request contact
      */
-    public KeyboardButton setRequestContact(boolean requestContact) {
+    public KeyboardButton setRequestContact(Boolean requestContact) {
         this.requestContact = requestContact;
         return this;
     }
 
     /**
-     * Is request location boolean.
+     * Is request location Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isRequestLocation() {
+    public Boolean isRequestLocation() {
         return requestLocation;
     }
 
@@ -68,7 +68,7 @@ public class KeyboardButton {
      * @param requestLocation the request location
      * @return the request location
      */
-    public KeyboardButton setRequestLocation(boolean requestLocation) {
+    public KeyboardButton setRequestLocation(Boolean requestLocation) {
         this.requestLocation = requestLocation;
         return this;
     }

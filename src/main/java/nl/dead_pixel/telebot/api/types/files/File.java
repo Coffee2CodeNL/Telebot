@@ -11,7 +11,7 @@ public class File implements IFile {
     @JsonProperty("file_id")
     private String fileId;
     @JsonProperty("file_size")
-    private int fileSize;
+    private Long fileSize;
     @JsonProperty("file_path")
     private String filePath;
 
@@ -40,7 +40,7 @@ public class File implements IFile {
      *
      * @return the file size
      */
-    public int getFileSize() {
+    public Long getFileSize() {
         return fileSize;
     }
 
@@ -50,7 +50,7 @@ public class File implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public File setFileSize(int fileSize) {
+    public File setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

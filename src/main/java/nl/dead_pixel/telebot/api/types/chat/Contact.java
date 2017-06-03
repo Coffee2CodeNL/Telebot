@@ -14,7 +14,7 @@ public class Contact {
     @JsonProperty("last_name")
     private String lastName;
     @JsonProperty("user_id")
-    private int userId;
+    private Long userId;
 
     /**
      * Gets phone number.
@@ -81,7 +81,7 @@ public class Contact {
      *
      * @return the user id
      */
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
@@ -91,7 +91,7 @@ public class Contact {
      * @param userId the user id
      * @return the user id
      */
-    public Contact setUserId(int userId) {
+    public Contact setUserId(Long userId) {
         this.userId = userId;
         return this;
     }

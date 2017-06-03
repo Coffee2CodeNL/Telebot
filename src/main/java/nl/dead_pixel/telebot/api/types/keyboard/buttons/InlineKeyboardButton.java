@@ -18,7 +18,7 @@ public class InlineKeyboardButton {
     private String switchInlineQueryCurrentChat;
     @JsonProperty("callback_game")
     private CallbackGame callbackGame;
-    private boolean pay;
+    private Boolean pay;
 
     /**
      * Gets text.
@@ -141,11 +141,11 @@ public class InlineKeyboardButton {
     }
 
     /**
-     * Is pay boolean.
+     * Is pay Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isPay() {
+    public Boolean isPay() {
         return pay;
     }
 
@@ -155,7 +155,7 @@ public class InlineKeyboardButton {
      * @param pay the pay
      * @return the pay
      */
-    public InlineKeyboardButton setPay(boolean pay) {
+    public InlineKeyboardButton setPay(Boolean pay) {
         this.pay = pay;
         return this;
     }

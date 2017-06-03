@@ -6,7 +6,7 @@ package nl.dead_pixel.telebot.api.types.payment;
  */
 public class LabeledPrice {
     private String label;
-    private int amount;
+    private Long amount;
 
     /**
      * Gets label.
@@ -33,7 +33,7 @@ public class LabeledPrice {
      *
      * @return the amount
      */
-    public int getAmount() {
+    public Long getAmount() {
         return amount;
     }
 
@@ -43,7 +43,7 @@ public class LabeledPrice {
      * @param amount the amount
      * @return the amount
      */
-    public LabeledPrice setAmount(int amount) {
+    public LabeledPrice setAmount(Long amount) {
         this.amount = amount;
         return this;
     }

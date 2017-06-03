@@ -9,15 +9,15 @@ import nl.dead_pixel.telebot.api.interfaces.IReplyMarkup;
  */
 public class ReplyKeyboardRemove implements IReplyMarkup {
     @JsonProperty("remove_keyboard")
-    private boolean removeKeyboard = true;
-    private boolean selective;
+    private Boolean removeKeyboard = true;
+    private Boolean selective;
 
     /**
-     * Is remove keyboard boolean.
+     * Is remove keyboard Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isRemoveKeyboard() {
+    public Boolean isRemoveKeyboard() {
         return removeKeyboard;
     }
 
@@ -27,17 +27,17 @@ public class ReplyKeyboardRemove implements IReplyMarkup {
      * @param removeKeyboard the remove keyboard
      * @return the remove keyboard
      */
-    public ReplyKeyboardRemove setRemoveKeyboard(boolean removeKeyboard) {
+    public ReplyKeyboardRemove setRemoveKeyboard(Boolean removeKeyboard) {
         this.removeKeyboard = removeKeyboard;
         return this;
     }
 
     /**
-     * Is selective boolean.
+     * Is selective Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isSelective() {
+    public Boolean isSelective() {
         return selective;
     }
 
@@ -47,7 +47,7 @@ public class ReplyKeyboardRemove implements IReplyMarkup {
      * @param selective the selective
      * @return the selective
      */
-    public ReplyKeyboardRemove setSelective(boolean selective) {
+    public ReplyKeyboardRemove setSelective(Boolean selective) {
         this.selective = selective;
         return this;
     }

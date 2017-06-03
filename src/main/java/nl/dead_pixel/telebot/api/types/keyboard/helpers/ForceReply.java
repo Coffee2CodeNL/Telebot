@@ -9,15 +9,15 @@ import nl.dead_pixel.telebot.api.interfaces.IReplyMarkup;
  */
 public class ForceReply implements IReplyMarkup {
     @JsonProperty("force_reply")
-    private boolean forceReply = true;
-    private boolean selective;
+    private Boolean forceReply = true;
+    private Boolean selective;
 
     /**
-     * Is force reply boolean.
+     * Is force reply Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isForceReply() {
+    public Boolean isForceReply() {
         return forceReply;
     }
 
@@ -27,17 +27,17 @@ public class ForceReply implements IReplyMarkup {
      * @param forceReply the force reply
      * @return the force reply
      */
-    public ForceReply setForceReply(boolean forceReply) {
+    public ForceReply setForceReply(Boolean forceReply) {
         this.forceReply = forceReply;
         return this;
     }
 
     /**
-     * Is selective boolean.
+     * Is selective Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isSelective() {
+    public Boolean isSelective() {
         return selective;
     }
 
@@ -47,7 +47,7 @@ public class ForceReply implements IReplyMarkup {
      * @param selective the selective
      * @return the selective
      */
-    public ForceReply setSelective(boolean selective) {
+    public ForceReply setSelective(Boolean selective) {
         this.selective = selective;
         return this;
     }

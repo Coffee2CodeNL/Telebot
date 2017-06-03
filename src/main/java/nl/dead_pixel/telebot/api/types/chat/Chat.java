@@ -16,7 +16,7 @@ public class Chat {
     @JsonProperty("last_name")
     private String lastName;
     @JsonProperty("all_members_are_administrators")
-    private boolean allMembersAreAdministrators;
+    private Boolean allMembersAreAdministrators;
 
     /**
      * Gets Chat id.
@@ -141,9 +141,9 @@ public class Chat {
     /**
      * A Method to check if all members in a chat are administrators or not.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isAllMembersAreAdministrators() {
+    public Boolean isAllMembersAreAdministrators() {
         return allMembersAreAdministrators;
     }
 
@@ -153,7 +153,7 @@ public class Chat {
      * @param allMembersAreAdministrators If True, All members are administrators in this chat.
      * @return The current {@link Chat} object
      */
-    public Chat setAllMembersAreAdministrators(boolean allMembersAreAdministrators) {
+    public Chat setAllMembersAreAdministrators(Boolean allMembersAreAdministrators) {
         this.allMembersAreAdministrators = allMembersAreAdministrators;
         return this;
     }

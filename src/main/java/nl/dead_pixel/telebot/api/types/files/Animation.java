@@ -16,7 +16,7 @@ public class Animation implements IFile {
     @JsonProperty("mime_type")
     private String mimeType;
     @JsonProperty("file_size")
-    private int fileSize;
+    private Long fileSize;
 
     /**
      * Gets file id.
@@ -103,7 +103,7 @@ public class Animation implements IFile {
      *
      * @return the file size
      */
-    public int getFileSize() {
+    public Long getFileSize() {
         return fileSize;
     }
 
@@ -113,7 +113,7 @@ public class Animation implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Animation setFileSize(int fileSize) {
+    public Animation setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

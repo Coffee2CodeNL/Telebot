@@ -14,7 +14,7 @@ import nl.dead_pixel.telebot.api.types.payment.ShippingQuery;
  */
 public class Update {
     @JsonProperty("update_id")
-    private int updateId;
+    private Long updateId;
     @JsonProperty("message")
     private Message message;
     @JsonProperty("edited_message")
@@ -39,7 +39,7 @@ public class Update {
      *
      * @return the update id
      */
-    public int getUpdateId() {
+    public Long getUpdateId() {
         return updateId;
     }
 

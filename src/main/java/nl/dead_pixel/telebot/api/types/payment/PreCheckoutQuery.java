@@ -12,7 +12,7 @@ public class PreCheckoutQuery {
     private User from;
     private String currency;
     @JsonProperty("total_amount")
-    private int totalAmount;
+    private Long totalAmount;
     @JsonProperty("invoice_payload")
     private String invoicePayload;
     @JsonProperty("shipping_option_id")
@@ -85,7 +85,7 @@ public class PreCheckoutQuery {
      *
      * @return the total amount
      */
-    public int getTotalAmount() {
+    public Long getTotalAmount() {
         return totalAmount;
     }
 
@@ -95,7 +95,7 @@ public class PreCheckoutQuery {
      * @param totalAmount the total amount
      * @return the total amount
      */
-    public PreCheckoutQuery setTotalAmount(int totalAmount) {
+    public PreCheckoutQuery setTotalAmount(Long totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }

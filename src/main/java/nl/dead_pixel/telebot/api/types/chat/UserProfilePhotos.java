@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class UserProfilePhotos {
     @JsonProperty("total_count")
-    private int totalCount;
+    private Long totalCount;
     private List<List<PhotoSize>> photos;
 
     /**
@@ -19,7 +19,7 @@ public class UserProfilePhotos {
      *
      * @return the total count
      */
-    public int getTotalCount() {
+    public Long getTotalCount() {
         return totalCount;
     }
 
@@ -29,7 +29,7 @@ public class UserProfilePhotos {
      * @param totalCount the total count
      * @return the total count
      */
-    public UserProfilePhotos setTotalCount(int totalCount) {
+    public UserProfilePhotos setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }

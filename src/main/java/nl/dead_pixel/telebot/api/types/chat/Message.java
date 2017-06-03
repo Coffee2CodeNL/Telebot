@@ -14,11 +14,11 @@ import java.util.List;
  */
 public class Message {
     @JsonProperty("message_id")
-    private int messageId;
+    private Long messageId;
     @JsonProperty("from")
     private User from;
     @JsonProperty("date")
-    private int date;
+    private Long date;
     @JsonProperty("chat")
     private Chat chat;
     @JsonProperty("forward_from")
@@ -26,32 +26,47 @@ public class Message {
     @JsonProperty("forward_from_chat")
     private Chat forwardFromChat;
     @JsonProperty("forward_from_message_id")
-    private int forwardFromMessageId;
+    private Long forwardFromMessageId;
     @JsonProperty("forward_date")
-    private int forwardDate;
+    private Long forwardDate;
     @JsonProperty("reply_to_message")
     private Message replyToMessage;
     @JsonProperty("edit_date")
-    private int editDate;
+    private Long editDate;
+    @JsonProperty("text")
     private String text;
+    @JsonProperty("entities")
     private List<MessageEntity> entities;
+    @JsonProperty("audio")
     private Audio audio;
+    @JsonProperty("document")
     private Document document;
+    @JsonProperty("game")
     private Game game;
+    @JsonProperty("photo")
     private List<PhotoSize> photo;
+    @JsonProperty("sticker")
     private Sticker sticker;
+    @JsonProperty("video")
     private Video video;
+    @JsonProperty("voice")
     private Voice voice;
     @JsonProperty("video_note")
     private VideoNote videoNote;
     @JsonProperty("new_chat_members")
     private List<User> newChatMembers;
+    @JsonProperty("caption")
     private String caption;
+    @JsonProperty("contact")
     private Contact contact;
+    @JsonProperty("location")
     private Location location;
+    @JsonProperty("venue")
     private Venue venue;
     @JsonProperty("new_chat_member")
     private User newChatMember;
+    @JsonProperty("new_chat_participant")
+    private User newChatParticipant;
     @JsonProperty("left_chat_member")
     private User leftChatMember;
     @JsonProperty("new_chat_title")
@@ -59,19 +74,20 @@ public class Message {
     @JsonProperty("new_chat_photo")
     private List<PhotoSize> newChatPhoto;
     @JsonProperty("delete_chat_photo")
-    private boolean deleteChatPhoto;
+    private Boolean deleteChatPhoto;
     @JsonProperty("group_chat_created")
-    private boolean groupChatCreated;
+    private Boolean groupChatCreated;
     @JsonProperty("supergroup_chat_created")
-    private boolean supergroupChatCreated;
+    private Boolean supergroupChatCreated;
     @JsonProperty("channel_chat_created")
-    private boolean channelChatCreated;
+    private Boolean channelChatCreated;
     @JsonProperty("migrate_to_chat_id")
-    private long migrateToChatId;
+    private Long migrateToChatId;
     @JsonProperty("migrate_from_chat_id")
-    private long migrateFromChatId;
+    private Long migrateFromChatId;
     @JsonProperty("pinned_message")
     private Message pinnedMessage;
+    @JsonProperty("invoice")
     private Invoice invoice;
     @JsonProperty("successful_payment")
     private SuccessfulPayment successfulPayment;
@@ -81,7 +97,7 @@ public class Message {
      *
      * @return the message id
      */
-    public int getMessageId() {
+    public Long getMessageId() {
         return messageId;
     }
 
@@ -91,7 +107,7 @@ public class Message {
      * @param messageId the message id
      * @return the message id
      */
-    public Message setMessageId(int messageId) {
+    public Message setMessageId(Long messageId) {
         this.messageId = messageId;
         return this;
     }
@@ -121,7 +137,7 @@ public class Message {
      *
      * @return the date
      */
-    public int getDate() {
+    public Long getDate() {
         return date;
     }
 
@@ -131,7 +147,7 @@ public class Message {
      * @param date the date
      * @return the date
      */
-    public Message setDate(int date) {
+    public Message setDate(Long date) {
         this.date = date;
         return this;
     }
@@ -201,7 +217,7 @@ public class Message {
      *
      * @return the forward from message id
      */
-    public int getForwardFromMessageId() {
+    public Long getForwardFromMessageId() {
         return forwardFromMessageId;
     }
 
@@ -211,7 +227,7 @@ public class Message {
      * @param forwardFromMessageId the forward from message id
      * @return the forward from message id
      */
-    public Message setForwardFromMessageId(int forwardFromMessageId) {
+    public Message setForwardFromMessageId(Long forwardFromMessageId) {
         this.forwardFromMessageId = forwardFromMessageId;
         return this;
     }
@@ -221,7 +237,7 @@ public class Message {
      *
      * @return the forward date
      */
-    public int getForwardDate() {
+    public Long getForwardDate() {
         return forwardDate;
     }
 
@@ -231,7 +247,7 @@ public class Message {
      * @param forwardDate the forward date
      * @return the forward date
      */
-    public Message setForwardDate(int forwardDate) {
+    public Message setForwardDate(Long forwardDate) {
         this.forwardDate = forwardDate;
         return this;
     }
@@ -261,7 +277,7 @@ public class Message {
      *
      * @return the edit date
      */
-    public int getEditDate() {
+    public Long getEditDate() {
         return editDate;
     }
 
@@ -271,7 +287,7 @@ public class Message {
      * @param editDate the edit date
      * @return the edit date
      */
-    public Message setEditDate(int editDate) {
+    public Message setEditDate(Long editDate) {
         this.editDate = editDate;
         return this;
     }
@@ -581,6 +597,7 @@ public class Message {
      *
      * @return the new chat member
      */
+    @Deprecated
     public User getNewChatMember() {
         return newChatMember;
     }
@@ -591,8 +608,31 @@ public class Message {
      * @param newChatMember the new chat member
      * @return the new chat member
      */
+    @Deprecated
     public Message setNewChatMember(User newChatMember) {
         this.newChatMember = newChatMember;
+        return this;
+    }
+
+    /**
+     * Gets new chat participant.
+     *
+     * @return the new chat participant
+     */
+    @Deprecated
+    public User getNewChatParticipant() {
+        return newChatParticipant;
+    }
+
+    /**
+     * Sets new chat participant.
+     *
+     * @param newChatParticipant the new chat participant
+     * @return the new chat participant
+     */
+    @Deprecated
+    public Message setNewChatParticipant(User newChatParticipant) {
+        this.newChatParticipant = newChatParticipant;
         return this;
     }
 
@@ -657,11 +697,11 @@ public class Message {
     }
 
     /**
-     * Is delete chat photo boolean.
+     * Is delete chat photo Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isDeleteChatPhoto() {
+    public Boolean isDeleteChatPhoto() {
         return deleteChatPhoto;
     }
 
@@ -671,17 +711,17 @@ public class Message {
      * @param deleteChatPhoto the delete chat photo
      * @return the delete chat photo
      */
-    public Message setDeleteChatPhoto(boolean deleteChatPhoto) {
+    public Message setDeleteChatPhoto(Boolean deleteChatPhoto) {
         this.deleteChatPhoto = deleteChatPhoto;
         return this;
     }
 
     /**
-     * Is group chat created boolean.
+     * Is group chat created Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isGroupChatCreated() {
+    public Boolean isGroupChatCreated() {
         return groupChatCreated;
     }
 
@@ -691,17 +731,17 @@ public class Message {
      * @param groupChatCreated the group chat created
      * @return the group chat created
      */
-    public Message setGroupChatCreated(boolean groupChatCreated) {
+    public Message setGroupChatCreated(Boolean groupChatCreated) {
         this.groupChatCreated = groupChatCreated;
         return this;
     }
 
     /**
-     * Is supergroup chat created boolean.
+     * Is supergroup chat created Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isSupergroupChatCreated() {
+    public Boolean isSupergroupChatCreated() {
         return supergroupChatCreated;
     }
 
@@ -711,17 +751,17 @@ public class Message {
      * @param supergroupChatCreated the supergroup chat created
      * @return the supergroup chat created
      */
-    public Message setSupergroupChatCreated(boolean supergroupChatCreated) {
+    public Message setSupergroupChatCreated(Boolean supergroupChatCreated) {
         this.supergroupChatCreated = supergroupChatCreated;
         return this;
     }
 
     /**
-     * Is channel chat created boolean.
+     * Is channel chat created Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isChannelChatCreated() {
+    public Boolean isChannelChatCreated() {
         return channelChatCreated;
     }
 
@@ -731,7 +771,7 @@ public class Message {
      * @param channelChatCreated the channel chat created
      * @return the channel chat created
      */
-    public Message setChannelChatCreated(boolean channelChatCreated) {
+    public Message setChannelChatCreated(Boolean channelChatCreated) {
         this.channelChatCreated = channelChatCreated;
         return this;
     }
@@ -741,7 +781,7 @@ public class Message {
      *
      * @return the migrate to chat id
      */
-    public long getMigrateToChatId() {
+    public Long getMigrateToChatId() {
         return migrateToChatId;
     }
 
@@ -751,7 +791,7 @@ public class Message {
      * @param migrateToChatId the migrate to chat id
      * @return the migrate to chat id
      */
-    public Message setMigrateToChatId(long migrateToChatId) {
+    public Message setMigrateToChatId(Long migrateToChatId) {
         this.migrateToChatId = migrateToChatId;
         return this;
     }
@@ -761,7 +801,7 @@ public class Message {
      *
      * @return the migrate from chat id
      */
-    public long getMigrateFromChatId() {
+    public Long getMigrateFromChatId() {
         return migrateFromChatId;
     }
 
@@ -771,7 +811,7 @@ public class Message {
      * @param migrateFromChatId the migrate from chat id
      * @return the migrate from chat id
      */
-    public Message setMigrateFromChatId(long migrateFromChatId) {
+    public Message setMigrateFromChatId(Long migrateFromChatId) {
         this.migrateFromChatId = migrateFromChatId;
         return this;
     }

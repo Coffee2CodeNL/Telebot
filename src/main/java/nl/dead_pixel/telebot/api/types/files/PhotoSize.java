@@ -10,10 +10,10 @@ import nl.dead_pixel.telebot.api.interfaces.IFile;
 public class PhotoSize implements IFile {
     @JsonProperty("file_id")
     private String fileId;
-    private int width;
-    private int height;
+    private Long width;
+    private Long height;
     @JsonProperty("file_size")
-    private int fileSize;
+    private Long fileSize;
 
     /**
      * Gets file id.
@@ -40,7 +40,7 @@ public class PhotoSize implements IFile {
      *
      * @return the width
      */
-    public int getWidth() {
+    public Long getWidth() {
         return width;
     }
 
@@ -50,7 +50,7 @@ public class PhotoSize implements IFile {
      * @param width the width
      * @return the width
      */
-    public PhotoSize setWidth(int width) {
+    public PhotoSize setWidth(Long width) {
         this.width = width;
         return this;
     }
@@ -60,7 +60,7 @@ public class PhotoSize implements IFile {
      *
      * @return the height
      */
-    public int getHeight() {
+    public Long getHeight() {
         return height;
     }
 
@@ -70,7 +70,7 @@ public class PhotoSize implements IFile {
      * @param height the height
      * @return the height
      */
-    public PhotoSize setHeight(int height) {
+    public PhotoSize setHeight(Long height) {
         this.height = height;
         return this;
     }
@@ -80,7 +80,7 @@ public class PhotoSize implements IFile {
      *
      * @return the file size
      */
-    public int getFileSize() {
+    public Long getFileSize() {
         return fileSize;
     }
 
@@ -90,7 +90,7 @@ public class PhotoSize implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public PhotoSize setFileSize(int fileSize) {
+    public PhotoSize setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

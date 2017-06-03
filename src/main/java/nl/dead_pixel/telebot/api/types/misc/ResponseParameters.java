@@ -10,7 +10,7 @@ public class ResponseParameters {
     @JsonProperty("migrate_to_chat_id")
     private long migrateToChatId;
     @JsonProperty("retry_after")
-    private int retryAfter;
+    private Long retryAfter;
 
     /**
      * Gets migrate to chat id.
@@ -37,7 +37,7 @@ public class ResponseParameters {
      *
      * @return the retry after
      */
-    public int getRetryAfter() {
+    public Long getRetryAfter() {
         return retryAfter;
     }
 
@@ -47,7 +47,7 @@ public class ResponseParameters {
      * @param retryAfter the retry after
      * @return the retry after
      */
-    public ResponseParameters setRetryAfter(int retryAfter) {
+    public ResponseParameters setRetryAfter(Long retryAfter) {
         this.retryAfter = retryAfter;
         return this;
     }

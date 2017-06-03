@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SuccessfulPayment {
     private String currency;
     @JsonProperty("total_amount")
-    private int totalAmount;
+    private Long totalAmount;
     @JsonProperty("invoice_payload")
     private String invoicePayload;
     @JsonProperty("shipping_option_id")
@@ -46,7 +46,7 @@ public class SuccessfulPayment {
      *
      * @return the total amount
      */
-    public int getTotalAmount() {
+    public Long getTotalAmount() {
         return totalAmount;
     }
 
@@ -56,7 +56,7 @@ public class SuccessfulPayment {
      * @param totalAmount the total amount
      * @return the total amount
      */
-    public SuccessfulPayment setTotalAmount(int totalAmount) {
+    public SuccessfulPayment setTotalAmount(Long totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }

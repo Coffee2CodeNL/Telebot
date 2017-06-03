@@ -10,13 +10,13 @@ import nl.dead_pixel.telebot.api.interfaces.IFile;
 public class Video implements IFile {
     @JsonProperty("file_id")
     private String fileId;
-    private int width;
-    private int height;
-    private int duration;
+    private Long width;
+    private Long height;
+    private Long duration;
     private PhotoSize thumb;
     private String mimeType;
     @JsonProperty("file_size")
-    private int fileSize;
+    private Long fileSize;
 
     /**
      * Gets file id.
@@ -43,7 +43,7 @@ public class Video implements IFile {
      *
      * @return the width
      */
-    public int getWidth() {
+    public Long getWidth() {
         return width;
     }
 
@@ -53,7 +53,7 @@ public class Video implements IFile {
      * @param width the width
      * @return the width
      */
-    public Video setWidth(int width) {
+    public Video setWidth(Long width) {
         this.width = width;
         return this;
     }
@@ -63,7 +63,7 @@ public class Video implements IFile {
      *
      * @return the height
      */
-    public int getHeight() {
+    public Long getHeight() {
         return height;
     }
 
@@ -73,7 +73,7 @@ public class Video implements IFile {
      * @param height the height
      * @return the height
      */
-    public Video setHeight(int height) {
+    public Video setHeight(Long height) {
         this.height = height;
         return this;
     }
@@ -83,7 +83,7 @@ public class Video implements IFile {
      *
      * @return the duration
      */
-    public int getDuration() {
+    public Long getDuration() {
         return duration;
     }
 
@@ -93,7 +93,7 @@ public class Video implements IFile {
      * @param duration the duration
      * @return the duration
      */
-    public Video setDuration(int duration) {
+    public Video setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
@@ -143,7 +143,7 @@ public class Video implements IFile {
      *
      * @return the file size
      */
-    public int getFileSize() {
+    public Long getFileSize() {
         return fileSize;
     }
 
@@ -153,7 +153,7 @@ public class Video implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Video setFileSize(int fileSize) {
+    public Video setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

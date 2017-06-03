@@ -10,11 +10,11 @@ import nl.dead_pixel.telebot.api.interfaces.IFile;
 public class Voice implements IFile {
     @JsonProperty("file_id")
     private String fileId;
-    private int duration;
+    private Long duration;
     @JsonProperty("mime_type")
     private String mimeType;
     @JsonProperty("file_size")
-    private int fileSize;
+    private Long fileSize;
 
     /**
      * Gets file id.
@@ -41,7 +41,7 @@ public class Voice implements IFile {
      *
      * @return the duration
      */
-    public int getDuration() {
+    public Long getDuration() {
         return duration;
     }
 
@@ -51,7 +51,7 @@ public class Voice implements IFile {
      * @param duration the duration
      * @return the duration
      */
-    public Voice setDuration(int duration) {
+    public Voice setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
@@ -81,7 +81,7 @@ public class Voice implements IFile {
      *
      * @return the file size
      */
-    public int getFileSize() {
+    public Long getFileSize() {
         return fileSize;
     }
 
@@ -91,7 +91,7 @@ public class Voice implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Voice setFileSize(int fileSize) {
+    public Voice setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

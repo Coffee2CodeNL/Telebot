@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * The type User.
  */
 public class User {
-    private int id;
+    private Long id;
     @JsonProperty("first_name")
     private String firstName;
     @JsonProperty("last_name")
@@ -21,7 +21,7 @@ public class User {
      *
      * @return the id
      */
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
@@ -31,7 +31,7 @@ public class User {
      * @param id the id
      * @return the id
      */
-    public User setId(int id) {
+    public User setId(Long id) {
         this.id = id;
         return this;
     }

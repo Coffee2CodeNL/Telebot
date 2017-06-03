@@ -13,10 +13,10 @@ import java.util.List;
 public class ReplyKeyboardMarkup implements IReplyMarkup {
     private List<List<KeyboardButton>> keyboard;
     @JsonProperty("resize_keyboard")
-    private boolean resizeKeyboard;
+    private Boolean resizeKeyboard;
     @JsonProperty("one_time_keyboard")
-    private boolean oneTimeKeyboard;
-    private boolean selective;
+    private Boolean oneTimeKeyboard;
+    private Boolean selective;
 
     /**
      * Gets keyboard.
@@ -39,11 +39,11 @@ public class ReplyKeyboardMarkup implements IReplyMarkup {
     }
 
     /**
-     * Is resize keyboard boolean.
+     * Is resize keyboard Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isResizeKeyboard() {
+    public Boolean isResizeKeyboard() {
         return resizeKeyboard;
     }
 
@@ -53,17 +53,17 @@ public class ReplyKeyboardMarkup implements IReplyMarkup {
      * @param resizeKeyboard the resize keyboard
      * @return the resize keyboard
      */
-    public ReplyKeyboardMarkup setResizeKeyboard(boolean resizeKeyboard) {
+    public ReplyKeyboardMarkup setResizeKeyboard(Boolean resizeKeyboard) {
         this.resizeKeyboard = resizeKeyboard;
         return this;
     }
 
     /**
-     * Is one time keyboard boolean.
+     * Is one time keyboard Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isOneTimeKeyboard() {
+    public Boolean isOneTimeKeyboard() {
         return oneTimeKeyboard;
     }
 
@@ -73,17 +73,17 @@ public class ReplyKeyboardMarkup implements IReplyMarkup {
      * @param oneTimeKeyboard the one time keyboard
      * @return the one time keyboard
      */
-    public ReplyKeyboardMarkup setOneTimeKeyboard(boolean oneTimeKeyboard) {
+    public ReplyKeyboardMarkup setOneTimeKeyboard(Boolean oneTimeKeyboard) {
         this.oneTimeKeyboard = oneTimeKeyboard;
         return this;
     }
 
     /**
-     * Is selective boolean.
+     * Is selective Boolean.
      *
-     * @return the boolean
+     * @return the Boolean
      */
-    public boolean isSelective() {
+    public Boolean isSelective() {
         return selective;
     }
 
@@ -93,7 +93,7 @@ public class ReplyKeyboardMarkup implements IReplyMarkup {
      * @param selective the selective
      * @return the selective
      */
-    public ReplyKeyboardMarkup setSelective(boolean selective) {
+    public ReplyKeyboardMarkup setSelective(Boolean selective) {
         this.selective = selective;
         return this;
     }

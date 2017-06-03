@@ -10,11 +10,11 @@ import nl.dead_pixel.telebot.api.interfaces.IFile;
 public class VideoNote implements IFile {
     @JsonProperty("file_id")
     private String fileId;
-    private int length;
-    private int duration;
+    private Long length;
+    private Long duration;
     private PhotoSize thumb;
     @JsonProperty("file_size")
-    private int fileSize;
+    private Long fileSize;
 
     /**
      * Gets file id.
@@ -41,7 +41,7 @@ public class VideoNote implements IFile {
      *
      * @return the length
      */
-    public int getLength() {
+    public Long getLength() {
         return length;
     }
 
@@ -51,7 +51,7 @@ public class VideoNote implements IFile {
      * @param length the length
      * @return the length
      */
-    public VideoNote setLength(int length) {
+    public VideoNote setLength(Long length) {
         this.length = length;
         return this;
     }
@@ -61,7 +61,7 @@ public class VideoNote implements IFile {
      *
      * @return the duration
      */
-    public int getDuration() {
+    public Long getDuration() {
         return duration;
     }
 
@@ -71,7 +71,7 @@ public class VideoNote implements IFile {
      * @param duration the duration
      * @return the duration
      */
-    public VideoNote setDuration(int duration) {
+    public VideoNote setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
@@ -101,7 +101,7 @@ public class VideoNote implements IFile {
      *
      * @return the file size
      */
-    public int getFileSize() {
+    public Long getFileSize() {
         return fileSize;
     }
 
@@ -111,7 +111,7 @@ public class VideoNote implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public VideoNote setFileSize(int fileSize) {
+    public VideoNote setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

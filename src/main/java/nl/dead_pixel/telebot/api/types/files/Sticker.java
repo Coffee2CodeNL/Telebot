@@ -10,12 +10,12 @@ import nl.dead_pixel.telebot.api.interfaces.IFile;
 public class Sticker implements IFile {
     @JsonProperty("file_id")
     private String fileId;
-    private int width;
-    private int height;
+    private Long width;
+    private Long height;
     private PhotoSize thumb;
     private String emoji;
     @JsonProperty("file_size")
-    private int fileSize;
+    private Long fileSize;
 
     /**
      * Gets file id.
@@ -42,7 +42,7 @@ public class Sticker implements IFile {
      *
      * @return the width
      */
-    public int getWidth() {
+    public Long getWidth() {
         return width;
     }
 
@@ -52,7 +52,7 @@ public class Sticker implements IFile {
      * @param width the width
      * @return the width
      */
-    public Sticker setWidth(int width) {
+    public Sticker setWidth(Long width) {
         this.width = width;
         return this;
     }
@@ -62,7 +62,7 @@ public class Sticker implements IFile {
      *
      * @return the height
      */
-    public int getHeight() {
+    public Long getHeight() {
         return height;
     }
 
@@ -72,7 +72,7 @@ public class Sticker implements IFile {
      * @param height the height
      * @return the height
      */
-    public Sticker setHeight(int height) {
+    public Sticker setHeight(Long height) {
         this.height = height;
         return this;
     }
@@ -122,7 +122,7 @@ public class Sticker implements IFile {
      *
      * @return the file size
      */
-    public int getFileSize() {
+    public Long getFileSize() {
         return fileSize;
     }
 
@@ -132,7 +132,7 @@ public class Sticker implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Sticker setFileSize(int fileSize) {
+    public Sticker setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

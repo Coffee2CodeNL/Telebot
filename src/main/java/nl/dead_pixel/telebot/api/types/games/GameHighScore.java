@@ -7,16 +7,16 @@ import nl.dead_pixel.telebot.api.types.chat.User;
  * The type Game high score.
  */
 public class GameHighScore {
-    private int position;
+    private Long position;
     private User user;
-    private int score;
+    private Long score;
 
     /**
      * Gets position.
      *
      * @return the position
      */
-    public int getPosition() {
+    public Long getPosition() {
         return position;
     }
 
@@ -26,7 +26,7 @@ public class GameHighScore {
      * @param position the position
      * @return the position
      */
-    public GameHighScore setPosition(int position) {
+    public GameHighScore setPosition(Long position) {
         this.position = position;
         return this;
     }
@@ -56,7 +56,7 @@ public class GameHighScore {
      *
      * @return the score
      */
-    public int getScore() {
+    public Long getScore() {
         return score;
     }
 
@@ -66,7 +66,7 @@ public class GameHighScore {
      * @param score the score
      * @return the score
      */
-    public GameHighScore setScore(int score) {
+    public GameHighScore setScore(Long score) {
         this.score = score;
         return this;
     }
