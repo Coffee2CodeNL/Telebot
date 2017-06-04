@@ -67,6 +67,8 @@ public class Message {
     private User newChatMember;
     @JsonProperty("new_chat_participant")
     private User newChatParticipant;
+    @JsonProperty("left_chat_participant")
+    private User leftChatParticipant;
     @JsonProperty("left_chat_member")
     private User leftChatMember;
     @JsonProperty("new_chat_title")
@@ -633,6 +635,28 @@ public class Message {
     @Deprecated
     public Message setNewChatParticipant(User newChatParticipant) {
         this.newChatParticipant = newChatParticipant;
+        return this;
+    }
+
+    /**
+     * Gets left chat participant.
+     *
+     * @return the left chat participant
+     */
+    @Deprecated
+    public User getLeftChatParticipant() {
+        return leftChatParticipant;
+    }
+
+    /**
+     * Sets left chat participant.
+     *
+     * @param leftChatParticipant the left chat participant
+     * @return the left chat participant
+     */
+    @Deprecated
+    public Message setLeftChatParticipant(User leftChatParticipant) {
+        this.leftChatParticipant = leftChatParticipant;
         return this;
     }
 

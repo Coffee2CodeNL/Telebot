@@ -18,7 +18,7 @@ public class Sticker implements IFile {
     private Long fileSize;
 
     /**
-     * Gets file id.
+     * Gets the file id.
      *
      * @return the file id
      */
