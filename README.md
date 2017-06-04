@@ -3,7 +3,7 @@ Java Telegram Bot API Library
 This library is meant to be used to create Telegram bots with ease, while allowing jobs to run in seperate threads.  
 The whole library is based on RxJava2 and Retrofit.
 
-### Roadmap
+## Roadmap
 This is a list of the methods and types that still need to be implemented.
 
 #### Methods to be added
