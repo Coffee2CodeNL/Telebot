@@ -1,5 +1,5 @@
 /**
- *    Copyright 2017 Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
+ *    Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -47,12 +47,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * The type Api.
+ * The type Telebot.
  *
  * @author ReSco
  * @since 10 :50 22-5-2017
  */
-public class Api {
+public class Telebot {
     private static OkHttpClient HttpClient;
     private static ObjectMapper Mapper;
     private static Logger Logger;
@@ -62,7 +62,7 @@ public class Api {
     private static List<IPlugin> Plugins;
     private static ExecutorService ThreadPool;
 
-    private Api() {
+    private Telebot() {
 
     }
 
@@ -76,7 +76,7 @@ public class Api {
     public static void init(String token, ExecutorService threadpool) {
         HttpClient = new OkHttpClient.Builder().readTimeout(60L, TimeUnit.SECONDS).build();
         Mapper = new ObjectMapper();
-        Logger = LoggerFactory.getLogger(Api.class.getSimpleName());
+        Logger = LoggerFactory.getLogger(Telebot.class.getSimpleName());
         Token = token;
         Plugins = new ArrayList<IPlugin>();
         ThreadPool = threadpool;
@@ -116,18 +116,18 @@ public class Api {
     }
 
     private static IUpdate determineType(Update update) {
-        if (update.getMessage() != null) {
-            if (!update.getMessage().getEntities().isEmpty()) {
-                return new CommandMessage(update.getMessage());
-            } else {
-                return update.getMessage();
-            }
-        } else if (update.getEditedMessage() != null) {
+        if (update.getEditedMessage() != null) {
             return new EditedMessage(update.getEditedMessage());
         } else if (update.getChannelPost() != null) {
             return new ChannelPost(update.getChannelPost());
         } else if (update.getEditedChannelPost() != null) {
             return new EditedChannelPost(update.getEditedChannelPost());
+        } else if (update.getMessage() != null) {
+            if (!update.getMessage().getEntities().isEmpty()) {
+                return new CommandMessage(update.getMessage());
+            } else {
+                return update.getMessage();
+            }
         } else if (update.getCallbackQuery() != null) {
             return update.getCallbackQuery();
         } else if (update.getInlineQuery() != null) {
@@ -151,8 +151,7 @@ public class Api {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            if(!updateApiResponse.getUpdates().isEmpty())
-            {
+            if (!updateApiResponse.getUpdates().isEmpty()) {
                 for (Update update : updateApiResponse.getUpdates()) {
                     updateId[0] = update.getUpdateId();
                     IUpdate parsedUpdate = determineType(update);
@@ -206,11 +205,19 @@ public class Api {
         return ApiService;
     }
 
+    /**
+     * Add plugin.
+     *
+     * @param plugin the plugin
+     */
     public static void addPlugin(IPlugin plugin) {
         Logger.debug("Adding " + plugin.getClass().getSimpleName().replace("Plugin", "") + " plugin");
         Plugins.add(plugin);
     }
 
+    /**
+     * Activate plugins.
+     */
     public static void activatePlugins() {
         for (IPlugin plugin : Plugins) {
             Logger.info("Activating " + plugin.getClass().getSimpleName().replace("Plugin", "") + " plugin");

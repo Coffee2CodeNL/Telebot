@@ -1,5 +1,5 @@
 /**
- *    Copyright 2017 Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
+ *    Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -15,21 +15,32 @@
  */
 package nl.dead_pixel.telebot.api.plugin;
 
-import nl.dead_pixel.telebot.api.Api;
+import nl.dead_pixel.telebot.api.Telebot;
 import nl.dead_pixel.telebot.api.interfaces.IPlugin;
-import nl.dead_pixel.telebot.api.interfaces.IUpdate;
-import nl.dead_pixel.telebot.api.types.chat.Message;
 
 /**
+ * The type Plugin.
+ *
+ * @param <U> the type parameter
  * @author ReSco
- * @since 11:49 6-6-2017
+ * @since 11 :49 6-6-2017
  */
 public abstract class Plugin<U> implements IPlugin {
     public void subscribe() {
-        Api.getUpdateObservable().ofType(pluginUpdateType()).subscribe(this::pluginBody);
+        Telebot.getUpdateObservable().ofType(pluginUpdateType()).subscribe(this::pluginBody);
     }
 
+    /**
+     * Plugin body.
+     *
+     * @param update the update
+     */
     public abstract void pluginBody(U update);
 
+    /**
+     * Plugin update type class.
+     *
+     * @return the class
+     */
     public abstract Class<U> pluginUpdateType();
 }

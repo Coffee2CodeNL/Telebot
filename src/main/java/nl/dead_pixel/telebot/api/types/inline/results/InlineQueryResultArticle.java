@@ -1,5 +1,5 @@
 /**
- *    Copyright 2017 Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
+ *    Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -23,8 +23,10 @@ import nl.dead_pixel.telebot.api.types.keyboard.markups.InlineKeyboardMarkup;
 import java.util.Optional;
 
 /**
+ * The type Inline query result article.
+ *
  * @author ReSco
- * @since 22:34 2-6-2017
+ * @since 22 :34 2-6-2017
  */
 public class InlineQueryResultArticle implements IInlineQueryResult {
     @JsonProperty("type")
@@ -50,6 +52,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
     @JsonProperty("thumb_height")
     private Optional<Long> thumbHeight = Optional.empty();
 
+    /**
+     * Gets type.
+     *
+     * @return the type
+     */
     public String getType() {
         return type;
     }
@@ -59,6 +66,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public String getId() {
         return id;
     }
@@ -68,6 +80,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets title.
+     *
+     * @return the title
+     */
     public String getTitle() {
         return title;
     }
@@ -77,6 +94,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets input message content.
+     *
+     * @return the input message content
+     */
     public IInputMessageContent getInputMessageContent() {
         return inputMessageContent;
     }
@@ -86,6 +108,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets inline keyboard markup.
+     *
+     * @return the inline keyboard markup
+     */
     public Optional<InlineKeyboardMarkup> getInlineKeyboardMarkup() {
         return inlineKeyboardMarkup;
     }
@@ -95,6 +122,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets url.
+     *
+     * @return the url
+     */
     public Optional<String> getUrl() {
         return url;
     }
@@ -104,6 +136,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets hide url.
+     *
+     * @return the hide url
+     */
     public Optional<Boolean> getHideUrl() {
         return hideUrl;
     }
@@ -113,6 +150,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets description.
+     *
+     * @return the description
+     */
     public Optional<String> getDescription() {
         return description;
     }
@@ -122,6 +164,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets thumb url.
+     *
+     * @return the thumb url
+     */
     public Optional<String> getThumbUrl() {
         return thumbUrl;
     }
@@ -131,6 +178,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets thumb width.
+     *
+     * @return the thumb width
+     */
     public Optional<Long> getThumbWidth() {
         return thumbWidth;
     }
@@ -140,6 +192,11 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return this;
     }
 
+    /**
+     * Gets thumb height.
+     *
+     * @return the thumb height
+     */
     public Optional<Long> getThumbHeight() {
         return thumbHeight;
     }

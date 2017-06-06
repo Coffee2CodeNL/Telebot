@@ -1,5 +1,5 @@
 /**
- *    Copyright 2017 Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
+ *    Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -19,15 +19,28 @@ import nl.dead_pixel.telebot.api.interfaces.IUpdate;
 import nl.dead_pixel.telebot.api.types.chat.Message;
 
 /**
+ * The type Command message.
+ *
  * @author ReSco
- * @since 20:09 6-6-2017
+ * @since 20 :09 6-6-2017
  */
 public class CommandMessage implements IUpdate {
     private Message message;
+
+    /**
+     * Instantiates a new Command message.
+     *
+     * @param message the message
+     */
     public CommandMessage(Message message) {
         this.message = message;
     }
 
+    /**
+     * Gets message.
+     *
+     * @return the message
+     */
     public Message getMessage() {
         return this.message;
     }

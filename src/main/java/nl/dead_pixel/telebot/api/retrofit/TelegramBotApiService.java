@@ -1,5 +1,5 @@
 /**
- *    Copyright 2017 Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
+ *    Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 package nl.dead_pixel.telebot.api.retrofit;
 
 import io.reactivex.Single;
-import nl.dead_pixel.telebot.api.Api;
 import nl.dead_pixel.telebot.api.retrofit.answer_bodies.CallbackQueryAnswer;
 import nl.dead_pixel.telebot.api.retrofit.answer_bodies.InlineQueryAnswer;
 import nl.dead_pixel.telebot.api.retrofit.request_bodies.*;
@@ -304,6 +303,7 @@ public interface TelegramBotApiService {
     /**
      * Leave chat single.
      *
+     * @param chatIdRequest the chat id request
      * @return the single
      */
     @POST("leaveChat")
@@ -313,6 +313,12 @@ public interface TelegramBotApiService {
     //// Keyboard Callback     Endpoints ////
     /////////////////////////////////////////
 
+    /**
+     * Answer callback query single.
+     *
+     * @param callbackQueryAnswer the callback query answer
+     * @return the single
+     */
     @POST("answerCallbackQuery")
     Single<ApiResponse<Boolean>> answerCallbackQuery(@Body CallbackQueryAnswer callbackQueryAnswer);
 
@@ -320,6 +326,12 @@ public interface TelegramBotApiService {
     //// Inline Mode           Endpoints ////
     /////////////////////////////////////////
 
+    /**
+     * Answer inline query single.
+     *
+     * @param inlineQueryAnswer the inline query answer
+     * @return the single
+     */
     @POST("answerInlineQuery")
     Single<ApiResponse<Boolean>> answerInlineQuery(@Body InlineQueryAnswer inlineQueryAnswer);
 

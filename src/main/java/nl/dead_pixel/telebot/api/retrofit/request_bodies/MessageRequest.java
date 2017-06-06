@@ -1,5 +1,5 @@
 /**
- *    Copyright 2017 Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
+ *    Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -147,12 +147,24 @@ public class MessageRequest {
             return this;
         }
 
+        /**
+         * Reply to builder.
+         *
+         * @param message the message
+         * @return the builder
+         */
         public Builder replyTo(Message message) {
             Long messageId = message.getMessageId();
             this.replyToMessageId = Optional.of(messageId);
             return this;
         }
 
+        /**
+         * Text builder.
+         *
+         * @param text the text
+         * @return the builder
+         */
         public Builder text(String text) {
             this.text = text;
             return this;

@@ -1,5 +1,5 @@
 /**
- *    Copyright 2017 Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
+ *    Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -21,8 +21,10 @@ import java.util.List;
 import java.util.Optional;
 
 /**
+ * The type Inline query answer.
+ *
  * @author ReSco
- * @since 22:34 2-6-2017
+ * @since 22 :34 2-6-2017
  */
 public class InlineQueryAnswer {
     private String inlineQueryId;

@@ -39,7 +39,7 @@ javadoc {
 
 license {
     ext.year = Calendar.getInstance().get(Calendar.YEAR)
-    ext.name = 'Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE)'
+    ext.name = 'Remon Schopmeijer (7914 7FFF 4E3C 86DE)'
     ext.email = 'support-telebot@dead-pixel.nl'
     header = file('LICENSE.header')
     strictCheck = true

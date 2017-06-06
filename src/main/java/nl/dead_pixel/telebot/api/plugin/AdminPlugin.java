@@ -1,5 +1,5 @@
 /**
- *    Copyright 2017 Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
+ *    Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -18,8 +18,10 @@ package nl.dead_pixel.telebot.api.plugin;
 import nl.dead_pixel.telebot.api.interfaces.IPlugin;
 
 /**
+ * The type Admin plugin.
+ *
  * @author ReSco
- * @since 11:49 6-6-2017
+ * @since 11 :49 6-6-2017
  */
 public abstract class AdminPlugin implements IPlugin {
 }
