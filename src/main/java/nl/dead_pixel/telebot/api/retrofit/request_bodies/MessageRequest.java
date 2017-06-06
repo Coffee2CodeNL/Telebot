@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import nl.dead_pixel.telebot.api.interfaces.IReplyMarkup;
+import nl.dead_pixel.telebot.api.types.chat.Message;
 import nl.dead_pixel.telebot.api.types.misc.Update;
 
 import java.util.Optional;
@@ -131,8 +132,8 @@ public class MessageRequest {
             return this;
         }
 
-        public Builder replyTo(Update update) {
-            Long messageId = update.getMessage().getMessageId();
+        public Builder replyTo(Message message) {
+            Long messageId = message.getMessageId();
             this.replyToMessageId = Optional.of(messageId);
             return this;
         }

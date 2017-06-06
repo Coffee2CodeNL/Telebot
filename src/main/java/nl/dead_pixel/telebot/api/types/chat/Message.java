@@ -1,18 +1,20 @@
 package nl.dead_pixel.telebot.api.types.chat;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import nl.dead_pixel.telebot.api.interfaces.IUpdate;
 import nl.dead_pixel.telebot.api.types.files.*;
 import nl.dead_pixel.telebot.api.types.games.Game;
 import nl.dead_pixel.telebot.api.types.payment.Invoice;
 import nl.dead_pixel.telebot.api.types.payment.SuccessfulPayment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 /**
  * The type Message.
  */
-public class Message {
+public class Message implements IUpdate {
     @JsonProperty("message_id")
     private Long messageId;
     @JsonProperty("from")
@@ -36,7 +38,7 @@ public class Message {
     @JsonProperty("text")
     private String text;
     @JsonProperty("entities")
-    private List<MessageEntity> entities;
+    private List<MessageEntity> entities = new ArrayList<MessageEntity>();
     @JsonProperty("audio")
     private Audio audio;
     @JsonProperty("document")
@@ -44,7 +46,7 @@ public class Message {
     @JsonProperty("game")
     private Game game;
     @JsonProperty("photo")
-    private List<PhotoSize> photo;
+    private List<PhotoSize> photo = new ArrayList<PhotoSize>();
     @JsonProperty("sticker")
     private Sticker sticker;
     @JsonProperty("video")
@@ -54,7 +56,7 @@ public class Message {
     @JsonProperty("video_note")
     private VideoNote videoNote;
     @JsonProperty("new_chat_members")
-    private List<User> newChatMembers;
+    private List<User> newChatMembers = new ArrayList<User>();
     @JsonProperty("caption")
     private String caption;
     @JsonProperty("contact")

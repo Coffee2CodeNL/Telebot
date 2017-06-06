@@ -1,6 +1,7 @@
 package nl.dead_pixel.telebot.api.types.keyboard.helpers;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import nl.dead_pixel.telebot.api.interfaces.IUpdate;
 import nl.dead_pixel.telebot.api.types.chat.Message;
 import nl.dead_pixel.telebot.api.types.chat.User;
 
@@ -8,7 +9,7 @@ import nl.dead_pixel.telebot.api.types.chat.User;
 /**
  * The type Callback query.
  */
-public class CallbackQuery {
+public class CallbackQuery implements IUpdate {
     private String id;
     private User from;
     private Message message;

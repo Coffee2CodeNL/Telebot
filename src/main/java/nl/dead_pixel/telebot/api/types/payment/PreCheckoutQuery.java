@@ -1,13 +1,14 @@
 package nl.dead_pixel.telebot.api.types.payment;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import nl.dead_pixel.telebot.api.interfaces.IUpdate;
 import nl.dead_pixel.telebot.api.types.chat.User;
 
 
 /**
  * The type Pre checkout query.
  */
-public class PreCheckoutQuery {
+public class PreCheckoutQuery implements IUpdate {
     private String id;
     private User from;
     private String currency;
