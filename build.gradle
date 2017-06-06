@@ -1,5 +1,6 @@
 plugins {
     id "net.ltgt.apt" version "0.10"
+    id "com.github.hierynomus.license" version "0.14.0"
     id "java"
     id "idea"
     id "checkstyle"
@@ -16,7 +17,7 @@ repositories {
     mavenCentral()
 }
 
-idea{
+idea {
     project {
         languageLevel = '1.8'
     }
@@ -34,6 +35,14 @@ javadoc {
     options.links("http://fasterxml.github.io/jackson-core/javadoc/2.8/")
     options.links("http://fasterxml.github.io/jackson-annotations/javadoc/2.8/")
     options.links("http://fasterxml.github.io/jackson-databind/javadoc/2.8/")
+}
+
+license {
+    ext.year = Calendar.getInstance().get(Calendar.YEAR)
+    ext.name = 'Remon Schopmeijer (49CDB43A4FB4D8AFF5361E8C79147FFF4E3C86DE)'
+    ext.email = 'support-telebot@dead-pixel.nl'
+    header = file('LICENSE.header')
+    strictCheck = true
 }
 
 dependencies {
