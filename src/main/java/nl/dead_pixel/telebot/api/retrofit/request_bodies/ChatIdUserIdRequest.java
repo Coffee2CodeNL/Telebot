@@ -13,7 +13,7 @@ public class ChatIdUserIdRequest {
     @JsonProperty("chat_id")
     private final Object chatId;
     @JsonProperty("user_id")
-    private final long userId;
+    private final Long userId;
 
     /**
      * @param builder Builder instance, passed in the {@link Builder#create()} method
@@ -29,7 +29,7 @@ public class ChatIdUserIdRequest {
     @JsonPOJOBuilder(buildMethodName = "create", withPrefix = "set")
     public static class Builder {
         private Object chatId;
-        private long userId;
+        private Long userId;
 
         /**
          * Sets chat id.

@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ResponseParameters {
     @JsonProperty("migrate_to_chat_id")
-    private long migrateToChatId;
+    private Long migrateToChatId;
     @JsonProperty("retry_after")
     private Long retryAfter;
 
@@ -17,7 +17,7 @@ public class ResponseParameters {
      *
      * @return the migrate to chat id
      */
-    public long getMigrateToChatId() {
+    public Long getMigrateToChatId() {
         return migrateToChatId;
     }
 
@@ -27,7 +27,7 @@ public class ResponseParameters {
      * @param migrateToChatId the migrate to chat id
      * @return the migrate to chat id
      */
-    public ResponseParameters setMigrateToChatId(long migrateToChatId) {
+    public ResponseParameters setMigrateToChatId(Long migrateToChatId) {
         this.migrateToChatId = migrateToChatId;
         return this;
     }

@@ -222,4 +222,20 @@ public class Update {
         this.preCheckoutQuery = preCheckoutQuery;
         return this;
     }
+
+    public String getTextFromMessage() {
+        return this.getMessage().getText();
+    }
+
+    public Boolean hasBotCommands() {
+        return getMessage() != null && getMessage().getEntities() != null;
+    }
+
+    public Long getChatId() {
+        return getMessage().getChat().getId() == null ? 0 : getMessage().getChat().getId();
+    }
+
+    public Long getMessageId() {
+        return getMessage().getMessageId() == null ? 0 : getMessage().getMessageId();
+    }
 }

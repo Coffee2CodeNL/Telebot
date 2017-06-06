@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import nl.dead_pixel.telebot.api.interfaces.IReplyMarkup;
+import nl.dead_pixel.telebot.api.types.misc.Update;
 
 import java.util.Optional;
 
@@ -50,7 +51,7 @@ public class MessageRequest {
     @JsonPOJOBuilder(buildMethodName = "create", withPrefix = "set")
     public static class Builder {
         private final Object chatId;
-        private final String text;
+        private String text;
         private Optional<String> parseMode = Optional.empty();
         private Optional<Boolean> disableWebPagePreview = Optional.empty();
         private Optional<Boolean> disableNotification = Optional.empty();
@@ -61,22 +62,18 @@ public class MessageRequest {
          * Instantiates a new Builder.
          *
          * @param chatId the chat id
-         * @param text   the text
          */
-        public Builder(String chatId, String text) {
+        public Builder(String chatId) {
             this.chatId = chatId;
-            this.text = text;
         }
 
         /**
          * Instantiates a new Builder.
          *
          * @param chatId the chat id
-         * @param text   the text
          */
-        public Builder(Long chatId, String text) {
+        public Builder(Long chatId) {
             this.chatId = chatId;
-            this.text = text;
         }
 
         /**
@@ -131,6 +128,17 @@ public class MessageRequest {
          */
         public Builder setReplyMarkup(IReplyMarkup replyMarkup) {
             this.replyMarkup = Optional.of(replyMarkup);
+            return this;
+        }
+
+        public Builder replyTo(Update update) {
+            Long messageId = update.getMessage().getMessageId();
+            this.replyToMessageId = Optional.of(messageId);
+            return this;
+        }
+
+        public Builder text(String text) {
+            this.text = text;
             return this;
         }
 

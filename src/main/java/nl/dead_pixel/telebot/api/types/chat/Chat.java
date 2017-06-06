@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * The type Chat.
  */
 public class Chat {
-    private long id;
+    private Long id;
     private String type;
     private String title;
     private String username;
@@ -23,7 +23,7 @@ public class Chat {
      *
      * @return the id
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -33,7 +33,7 @@ public class Chat {
      * @param id the id
      * @return The current {@link Chat} object
      */
-    public Chat setId(long id) {
+    public Chat setId(Long id) {
         this.id = id;
         return this;
     }
