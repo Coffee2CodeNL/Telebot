@@ -83,6 +83,7 @@ public class Api {
                         handleResponse(updateId, HttpClient.newCall(request).execute(), emitter);
                     } else {
                         Long offset = updateId[0] + 1;
+                        Logger.debug("Update ID: " + updateId[0]);
                         Request request = new Request.Builder().url("https://api.telegram.org/bot" + Token + "/getUpdates?timeout=60&offset=" + offset).build();
                         handleResponse(updateId, HttpClient.newCall(request).execute(), emitter);
                     }
@@ -108,11 +109,11 @@ public class Api {
                 return update.getMessage();
             }
         } else if (update.getEditedMessage() != null) {
-            return (EditedMessage) update.getEditedMessage();
+            return new EditedMessage(update.getEditedMessage());
         } else if (update.getChannelPost() != null) {
-            return (ChannelPost) update.getChannelPost();
+            return new ChannelPost(update.getChannelPost());
         } else if (update.getEditedChannelPost() != null) {
-            return (EditedChannelPost) update.getEditedChannelPost();
+            return new EditedChannelPost(update.getEditedChannelPost());
         } else if (update.getCallbackQuery() != null) {
             return update.getCallbackQuery();
         } else if (update.getInlineQuery() != null) {
@@ -124,7 +125,7 @@ public class Api {
         } else if (update.getShippingQuery() != null) {
             return update.getShippingQuery();
         } else {
-            return null;
+            throw new TypeNotPresentException("Could not Determine type", new Throwable("Unknown Type"));
         }
     }
 
