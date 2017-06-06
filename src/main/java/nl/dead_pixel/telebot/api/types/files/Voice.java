@@ -31,7 +31,7 @@ public class Voice implements IFile {
      * @param fileId the file id
      * @return the file id
      */
-    public Voice setFileId(String fileId) {
+    private Voice setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -51,7 +51,7 @@ public class Voice implements IFile {
      * @param duration the duration
      * @return the duration
      */
-    public Voice setDuration(Long duration) {
+    private Voice setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
@@ -71,7 +71,7 @@ public class Voice implements IFile {
      * @param mimeType the mime type
      * @return the mime type
      */
-    public Voice setMimeType(String mimeType) {
+    private Voice setMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
@@ -91,7 +91,7 @@ public class Voice implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Voice setFileSize(Long fileSize) {
+    private Voice setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

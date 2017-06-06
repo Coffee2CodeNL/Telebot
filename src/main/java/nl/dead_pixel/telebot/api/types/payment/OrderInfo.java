@@ -29,7 +29,7 @@ public class OrderInfo {
      * @param name the name
      * @return the name
      */
-    public OrderInfo setName(String name) {
+    private OrderInfo setName(String name) {
         this.name = name;
         return this;
     }
@@ -49,7 +49,7 @@ public class OrderInfo {
      * @param phoneNumber the phone number
      * @return the phone number
      */
-    public OrderInfo setPhoneNumber(String phoneNumber) {
+    private OrderInfo setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
@@ -69,7 +69,7 @@ public class OrderInfo {
      * @param email the email
      * @return the email
      */
-    public OrderInfo setEmail(String email) {
+    private OrderInfo setEmail(String email) {
         this.email = email;
         return this;
     }
@@ -89,7 +89,7 @@ public class OrderInfo {
      * @param shippingAddress the shipping address
      * @return the shipping address
      */
-    public OrderInfo setShippingAddress(ShippingAddress shippingAddress) {
+    private OrderInfo setShippingAddress(ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }

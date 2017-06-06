@@ -33,7 +33,7 @@ public class Video implements IFile {
      * @param fileId the file id
      * @return the file id
      */
-    public Video setFileId(String fileId) {
+    private Video setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -53,7 +53,7 @@ public class Video implements IFile {
      * @param width the width
      * @return the width
      */
-    public Video setWidth(Long width) {
+    private Video setWidth(Long width) {
         this.width = width;
         return this;
     }
@@ -73,7 +73,7 @@ public class Video implements IFile {
      * @param height the height
      * @return the height
      */
-    public Video setHeight(Long height) {
+    private Video setHeight(Long height) {
         this.height = height;
         return this;
     }
@@ -93,7 +93,7 @@ public class Video implements IFile {
      * @param duration the duration
      * @return the duration
      */
-    public Video setDuration(Long duration) {
+    private Video setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
@@ -113,7 +113,7 @@ public class Video implements IFile {
      * @param thumb the thumb
      * @return the thumb
      */
-    public Video setThumb(PhotoSize thumb) {
+    private Video setThumb(PhotoSize thumb) {
         this.thumb = thumb;
         return this;
     }
@@ -133,7 +133,7 @@ public class Video implements IFile {
      * @param mimeType the mime type
      * @return the mime type
      */
-    public Video setMimeType(String mimeType) {
+    private Video setMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
@@ -153,7 +153,7 @@ public class Video implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Video setFileSize(Long fileSize) {
+    private Video setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

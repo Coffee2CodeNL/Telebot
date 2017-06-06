@@ -30,7 +30,7 @@ public class File implements IFile {
      * @param fileId the file id
      * @return the file id
      */
-    public File setFileId(String fileId) {
+    private File setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -50,7 +50,7 @@ public class File implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public File setFileSize(Long fileSize) {
+    private File setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }
@@ -70,7 +70,7 @@ public class File implements IFile {
      * @param filePath the file path
      * @return the file path
      */
-    public File setFilePath(String filePath) {
+    private File setFilePath(String filePath) {
         this.filePath = filePath;
         return this;
     }

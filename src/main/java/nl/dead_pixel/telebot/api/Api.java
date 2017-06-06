@@ -74,17 +74,16 @@ public class Api {
     private static void createObservable() {
         UpdateObservable = Observable.create((ObservableEmitter<IUpdate> emitter) -> {
             final Long[] updateId = new Long[1];
-            Logger.info("Update Watcher is live. Update ID is: " + updateId[0]);
+            Logger.info("Update Watcher is live.");
             while (true) {
                 try {
-                    Response response;
                     if (updateId[0] == null) {
                         Request request = new Request.Builder().url("https://api.telegram.org/bot" + Token + "/getUpdates?timeout=60").build();
                         handleResponse(updateId, HttpClient.newCall(request).execute(), emitter);
                     } else {
                         Long offset = updateId[0] + 1;
-                        Logger.debug("Update ID: " + updateId[0]);
                         Request request = new Request.Builder().url("https://api.telegram.org/bot" + Token + "/getUpdates?timeout=60&offset=" + offset).build();
+                        Logger.debug("Update ID: " + updateId[0]);
                         handleResponse(updateId, HttpClient.newCall(request).execute(), emitter);
                     }
                 } catch (SocketTimeoutException ex) {
@@ -137,10 +136,13 @@ public class Api {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            for (Update update : updateApiResponse.getUpdates()) {
-                updateId[0] = update.getUpdateId();
-                IUpdate parsedUpdate = determineType(update);
-                emitter.onNext(parsedUpdate);
+            if(!updateApiResponse.getUpdates().isEmpty())
+            {
+                for (Update update : updateApiResponse.getUpdates()) {
+                    updateId[0] = update.getUpdateId();
+                    IUpdate parsedUpdate = determineType(update);
+                    emitter.onNext(parsedUpdate);
+                }
             }
         } else {
             Logger.info("Something happened!" + response.message());
@@ -184,21 +186,19 @@ public class Api {
             }
             Retrofit retrofit = retrofitBuilder.build();
             ApiService = retrofit.create(TelegramBotApiService.class);
-            Logger.info("Returning the service.");
-            return ApiService;
-        } else {
-            Logger.info("Instance found, returning!");
-            return ApiService;
         }
+        Logger.info("Returning ApiService instance.");
+        return ApiService;
     }
 
     public static void addPlugin(IPlugin plugin) {
+        Logger.debug("Adding " + plugin.getClass().getSimpleName().replace("Plugin", "") + " plugin");
         Plugins.add(plugin);
     }
 
     public static void activatePlugins() {
         for (IPlugin plugin : Plugins) {
-            Logger.info("Hooking plugin " + plugin.getClass().getSimpleName());
+            Logger.info("Activating " + plugin.getClass().getSimpleName().replace("Plugin", "") + " plugin");
             plugin.subscribe();
         }
     }

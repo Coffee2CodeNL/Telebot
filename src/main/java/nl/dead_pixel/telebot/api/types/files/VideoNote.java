@@ -31,7 +31,7 @@ public class VideoNote implements IFile {
      * @param fileId the file id
      * @return the file id
      */
-    public VideoNote setFileId(String fileId) {
+    private VideoNote setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -51,7 +51,7 @@ public class VideoNote implements IFile {
      * @param length the length
      * @return the length
      */
-    public VideoNote setLength(Long length) {
+    private VideoNote setLength(Long length) {
         this.length = length;
         return this;
     }
@@ -71,7 +71,7 @@ public class VideoNote implements IFile {
      * @param duration the duration
      * @return the duration
      */
-    public VideoNote setDuration(Long duration) {
+    private VideoNote setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
@@ -91,7 +91,7 @@ public class VideoNote implements IFile {
      * @param thumb the thumb
      * @return the thumb
      */
-    public VideoNote setThumb(PhotoSize thumb) {
+    private VideoNote setThumb(PhotoSize thumb) {
         this.thumb = thumb;
         return this;
     }
@@ -111,7 +111,7 @@ public class VideoNote implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public VideoNote setFileSize(Long fileSize) {
+    private VideoNote setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

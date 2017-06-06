@@ -33,7 +33,7 @@ public class ShippingAddress {
      * @param countryCode the country code
      * @return the country code
      */
-    public ShippingAddress setCountryCode(String countryCode) {
+    private ShippingAddress setCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
@@ -53,7 +53,7 @@ public class ShippingAddress {
      * @param state the state
      * @return the state
      */
-    public ShippingAddress setState(String state) {
+    private ShippingAddress setState(String state) {
         this.state = state;
         return this;
     }
@@ -73,7 +73,7 @@ public class ShippingAddress {
      * @param city the city
      * @return the city
      */
-    public ShippingAddress setCity(String city) {
+    private ShippingAddress setCity(String city) {
         this.city = city;
         return this;
     }
@@ -93,7 +93,7 @@ public class ShippingAddress {
      * @param streetLine1 the street line 1
      * @return the street line 1
      */
-    public ShippingAddress setStreetLine1(String streetLine1) {
+    private ShippingAddress setStreetLine1(String streetLine1) {
         this.streetLine1 = streetLine1;
         return this;
     }
@@ -113,7 +113,7 @@ public class ShippingAddress {
      * @param streetLine2 the street line 2
      * @return the street line 2
      */
-    public ShippingAddress setStreetLine2(String streetLine2) {
+    private ShippingAddress setStreetLine2(String streetLine2) {
         this.streetLine2 = streetLine2;
         return this;
     }
@@ -133,7 +133,7 @@ public class ShippingAddress {
      * @param postCode the post code
      * @return the post code
      */
-    public ShippingAddress setPostCode(String postCode) {
+    private ShippingAddress setPostCode(String postCode) {
         this.postCode = postCode;
         return this;
     }

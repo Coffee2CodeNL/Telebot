@@ -26,7 +26,7 @@ public class GameHighScore {
      * @param position the position
      * @return the position
      */
-    public GameHighScore setPosition(Long position) {
+    private GameHighScore setPosition(Long position) {
         this.position = position;
         return this;
     }
@@ -46,7 +46,7 @@ public class GameHighScore {
      * @param user the user
      * @return the user
      */
-    public GameHighScore setUser(User user) {
+    private GameHighScore setUser(User user) {
         this.user = user;
         return this;
     }
@@ -66,7 +66,7 @@ public class GameHighScore {
      * @param score the score
      * @return the score
      */
-    public GameHighScore setScore(Long score) {
+    private GameHighScore setScore(Long score) {
         this.score = score;
         return this;
     }

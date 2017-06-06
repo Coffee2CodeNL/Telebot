@@ -27,7 +27,7 @@ public class ForceReply implements IReplyMarkup {
      * @param forceReply the force reply
      * @return the force reply
      */
-    public ForceReply setForceReply(Boolean forceReply) {
+    private ForceReply setForceReply(Boolean forceReply) {
         this.forceReply = forceReply;
         return this;
     }
@@ -47,7 +47,7 @@ public class ForceReply implements IReplyMarkup {
      * @param selective the selective
      * @return the selective
      */
-    public ForceReply setSelective(Boolean selective) {
+    private ForceReply setSelective(Boolean selective) {
         this.selective = selective;
         return this;
     }

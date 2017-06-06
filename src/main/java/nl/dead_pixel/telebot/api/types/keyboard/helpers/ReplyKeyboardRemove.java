@@ -27,7 +27,7 @@ public class ReplyKeyboardRemove implements IReplyMarkup {
      * @param removeKeyboard the remove keyboard
      * @return the remove keyboard
      */
-    public ReplyKeyboardRemove setRemoveKeyboard(Boolean removeKeyboard) {
+    private ReplyKeyboardRemove setRemoveKeyboard(Boolean removeKeyboard) {
         this.removeKeyboard = removeKeyboard;
         return this;
     }
@@ -47,7 +47,7 @@ public class ReplyKeyboardRemove implements IReplyMarkup {
      * @param selective the selective
      * @return the selective
      */
-    public ReplyKeyboardRemove setSelective(Boolean selective) {
+    private ReplyKeyboardRemove setSelective(Boolean selective) {
         this.selective = selective;
         return this;
     }

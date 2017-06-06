@@ -28,7 +28,7 @@ public class Venue {
      * @param location the location
      * @return the location
      */
-    public Venue setLocation(Location location) {
+    private Venue setLocation(Location location) {
         this.location = location;
         return this;
     }
@@ -48,7 +48,7 @@ public class Venue {
      * @param title the title
      * @return the title
      */
-    public Venue setTitle(String title) {
+    private Venue setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -68,7 +68,7 @@ public class Venue {
      * @param address the address
      * @return the address
      */
-    public Venue setAddress(String address) {
+    private Venue setAddress(String address) {
         this.address = address;
         return this;
     }
@@ -88,7 +88,7 @@ public class Venue {
      * @param foursquareId the foursquare id
      * @return the foursquare id
      */
-    public Venue setFoursquareId(String foursquareId) {
+    private Venue setFoursquareId(String foursquareId) {
         this.foursquareId = foursquareId;
         return this;
     }

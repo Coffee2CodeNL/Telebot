@@ -32,7 +32,7 @@ public class Document implements IFile {
      * @param fileId the file id
      * @return the file id
      */
-    public Document setFileId(String fileId) {
+    private Document setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -52,7 +52,7 @@ public class Document implements IFile {
      * @param thumb the thumb
      * @return the thumb
      */
-    public Document setThumb(PhotoSize thumb) {
+    private Document setThumb(PhotoSize thumb) {
         this.thumb = thumb;
         return this;
     }
@@ -72,7 +72,7 @@ public class Document implements IFile {
      * @param fileName the file name
      * @return the file name
      */
-    public Document setFileName(String fileName) {
+    private Document setFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
@@ -92,7 +92,7 @@ public class Document implements IFile {
      * @param mimeType the mime type
      * @return the mime type
      */
-    public Document setMimeType(String mimeType) {
+    private Document setMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
@@ -112,7 +112,7 @@ public class Document implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Document setFileSize(Long fileSize) {
+    private Document setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

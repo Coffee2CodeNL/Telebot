@@ -36,7 +36,7 @@ public class CallbackQuery implements IUpdate {
      * @param id the id
      * @return the id
      */
-    public CallbackQuery setId(String id) {
+    private CallbackQuery setId(String id) {
         this.id = id;
         return this;
     }
@@ -56,7 +56,7 @@ public class CallbackQuery implements IUpdate {
      * @param from the from
      * @return the from
      */
-    public CallbackQuery setFrom(User from) {
+    private CallbackQuery setFrom(User from) {
         this.from = from;
         return this;
     }
@@ -76,7 +76,7 @@ public class CallbackQuery implements IUpdate {
      * @param message the message
      * @return the message
      */
-    public CallbackQuery setMessage(Message message) {
+    private CallbackQuery setMessage(Message message) {
         this.message = message;
         return this;
     }
@@ -96,7 +96,7 @@ public class CallbackQuery implements IUpdate {
      * @param inlineMessageId the inline message id
      * @return the inline message id
      */
-    public CallbackQuery setInlineMessageId(String inlineMessageId) {
+    private CallbackQuery setInlineMessageId(String inlineMessageId) {
         this.inlineMessageId = inlineMessageId;
         return this;
     }
@@ -116,7 +116,7 @@ public class CallbackQuery implements IUpdate {
      * @param chatInstance the chat instance
      * @return the chat instance
      */
-    public CallbackQuery setChatInstance(String chatInstance) {
+    private CallbackQuery setChatInstance(String chatInstance) {
         this.chatInstance = chatInstance;
         return this;
     }
@@ -136,7 +136,7 @@ public class CallbackQuery implements IUpdate {
      * @param data the data
      * @return the data
      */
-    public CallbackQuery setData(String data) {
+    private CallbackQuery setData(String data) {
         this.data = data;
         return this;
     }
@@ -156,7 +156,7 @@ public class CallbackQuery implements IUpdate {
      * @param gameShortName the game short name
      * @return the game short name
      */
-    public CallbackQuery setGameShortName(String gameShortName) {
+    private CallbackQuery setGameShortName(String gameShortName) {
         this.gameShortName = gameShortName;
         return this;
     }

@@ -111,7 +111,7 @@ public class Message implements IUpdate {
      * @param messageId the message id
      * @return the message id
      */
-    public Message setMessageId(Long messageId) {
+    private Message setMessageId(Long messageId) {
         this.messageId = messageId;
         return this;
     }
@@ -131,7 +131,7 @@ public class Message implements IUpdate {
      * @param from the from
      * @return the from
      */
-    public Message setFrom(User from) {
+    private Message setFrom(User from) {
         this.from = from;
         return this;
     }
@@ -151,7 +151,7 @@ public class Message implements IUpdate {
      * @param date the date
      * @return the date
      */
-    public Message setDate(Long date) {
+    private Message setDate(Long date) {
         this.date = date;
         return this;
     }
@@ -171,7 +171,7 @@ public class Message implements IUpdate {
      * @param chat the chat
      * @return the chat
      */
-    public Message setChat(Chat chat) {
+    private Message setChat(Chat chat) {
         this.chat = chat;
         return this;
     }
@@ -191,7 +191,7 @@ public class Message implements IUpdate {
      * @param forwardFrom the forward from
      * @return the forward from
      */
-    public Message setForwardFrom(User forwardFrom) {
+    private Message setForwardFrom(User forwardFrom) {
         this.forwardFrom = forwardFrom;
         return this;
     }
@@ -211,7 +211,7 @@ public class Message implements IUpdate {
      * @param forwardFromChat the forward from chat
      * @return the forward from chat
      */
-    public Message setForwardFromChat(Chat forwardFromChat) {
+    private Message setForwardFromChat(Chat forwardFromChat) {
         this.forwardFromChat = forwardFromChat;
         return this;
     }
@@ -231,7 +231,7 @@ public class Message implements IUpdate {
      * @param forwardFromMessageId the forward from message id
      * @return the forward from message id
      */
-    public Message setForwardFromMessageId(Long forwardFromMessageId) {
+    private Message setForwardFromMessageId(Long forwardFromMessageId) {
         this.forwardFromMessageId = forwardFromMessageId;
         return this;
     }
@@ -251,7 +251,7 @@ public class Message implements IUpdate {
      * @param forwardDate the forward date
      * @return the forward date
      */
-    public Message setForwardDate(Long forwardDate) {
+    private Message setForwardDate(Long forwardDate) {
         this.forwardDate = forwardDate;
         return this;
     }
@@ -271,7 +271,7 @@ public class Message implements IUpdate {
      * @param replyToMessage the reply to message
      * @return the reply to message
      */
-    public Message setReplyToMessage(Message replyToMessage) {
+    private Message setReplyToMessage(Message replyToMessage) {
         this.replyToMessage = replyToMessage;
         return this;
     }
@@ -291,7 +291,7 @@ public class Message implements IUpdate {
      * @param editDate the edit date
      * @return the edit date
      */
-    public Message setEditDate(Long editDate) {
+    private Message setEditDate(Long editDate) {
         this.editDate = editDate;
         return this;
     }
@@ -311,7 +311,7 @@ public class Message implements IUpdate {
      * @param text the text
      * @return the text
      */
-    public Message setText(String text) {
+    private Message setText(String text) {
         this.text = text;
         return this;
     }
@@ -331,7 +331,7 @@ public class Message implements IUpdate {
      * @param entities the entities
      * @return the entities
      */
-    public Message setEntities(List<MessageEntity> entities) {
+    private Message setEntities(List<MessageEntity> entities) {
         this.entities = entities;
         return this;
     }
@@ -351,7 +351,7 @@ public class Message implements IUpdate {
      * @param audio the audio
      * @return the audio
      */
-    public Message setAudio(Audio audio) {
+    private Message setAudio(Audio audio) {
         this.audio = audio;
         return this;
     }
@@ -371,7 +371,7 @@ public class Message implements IUpdate {
      * @param document the document
      * @return the document
      */
-    public Message setDocument(Document document) {
+    private Message setDocument(Document document) {
         this.document = document;
         return this;
     }
@@ -391,7 +391,7 @@ public class Message implements IUpdate {
      * @param game the game
      * @return the game
      */
-    public Message setGame(Game game) {
+    private Message setGame(Game game) {
         this.game = game;
         return this;
     }
@@ -411,7 +411,7 @@ public class Message implements IUpdate {
      * @param photo the photo
      * @return the photo
      */
-    public Message setPhoto(List<PhotoSize> photo) {
+    private Message setPhoto(List<PhotoSize> photo) {
         this.photo = photo;
         return this;
     }
@@ -431,7 +431,7 @@ public class Message implements IUpdate {
      * @param sticker the sticker
      * @return the sticker
      */
-    public Message setSticker(Sticker sticker) {
+    private Message setSticker(Sticker sticker) {
         this.sticker = sticker;
         return this;
     }
@@ -451,7 +451,7 @@ public class Message implements IUpdate {
      * @param video the video
      * @return the video
      */
-    public Message setVideo(Video video) {
+    private Message setVideo(Video video) {
         this.video = video;
         return this;
     }
@@ -471,7 +471,7 @@ public class Message implements IUpdate {
      * @param voice the voice
      * @return the voice
      */
-    public Message setVoice(Voice voice) {
+    private Message setVoice(Voice voice) {
         this.voice = voice;
         return this;
     }
@@ -491,7 +491,7 @@ public class Message implements IUpdate {
      * @param videoNote the video note
      * @return the video note
      */
-    public Message setVideoNote(VideoNote videoNote) {
+    private Message setVideoNote(VideoNote videoNote) {
         this.videoNote = videoNote;
         return this;
     }
@@ -511,7 +511,7 @@ public class Message implements IUpdate {
      * @param newChatMembers the new chat members
      * @return the new chat members
      */
-    public Message setNewChatMembers(List<User> newChatMembers) {
+    private Message setNewChatMembers(List<User> newChatMembers) {
         this.newChatMembers = newChatMembers;
         return this;
     }
@@ -531,7 +531,7 @@ public class Message implements IUpdate {
      * @param caption the caption
      * @return the caption
      */
-    public Message setCaption(String caption) {
+    private Message setCaption(String caption) {
         this.caption = caption;
         return this;
     }
@@ -551,7 +551,7 @@ public class Message implements IUpdate {
      * @param contact the contact
      * @return the contact
      */
-    public Message setContact(Contact contact) {
+    private Message setContact(Contact contact) {
         this.contact = contact;
         return this;
     }
@@ -571,7 +571,7 @@ public class Message implements IUpdate {
      * @param location the location
      * @return the location
      */
-    public Message setLocation(Location location) {
+    private Message setLocation(Location location) {
         this.location = location;
         return this;
     }
@@ -591,7 +591,7 @@ public class Message implements IUpdate {
      * @param venue the venue
      * @return the venue
      */
-    public Message setVenue(Venue venue) {
+    private Message setVenue(Venue venue) {
         this.venue = venue;
         return this;
     }
@@ -613,7 +613,7 @@ public class Message implements IUpdate {
      * @return the new chat member
      */
     @Deprecated
-    public Message setNewChatMember(User newChatMember) {
+    private Message setNewChatMember(User newChatMember) {
         this.newChatMember = newChatMember;
         return this;
     }
@@ -635,7 +635,7 @@ public class Message implements IUpdate {
      * @return the new chat participant
      */
     @Deprecated
-    public Message setNewChatParticipant(User newChatParticipant) {
+    private Message setNewChatParticipant(User newChatParticipant) {
         this.newChatParticipant = newChatParticipant;
         return this;
     }
@@ -657,7 +657,7 @@ public class Message implements IUpdate {
      * @return the left chat participant
      */
     @Deprecated
-    public Message setLeftChatParticipant(User leftChatParticipant) {
+    private Message setLeftChatParticipant(User leftChatParticipant) {
         this.leftChatParticipant = leftChatParticipant;
         return this;
     }
@@ -677,7 +677,7 @@ public class Message implements IUpdate {
      * @param leftChatMember the left chat member
      * @return the left chat member
      */
-    public Message setLeftChatMember(User leftChatMember) {
+    private Message setLeftChatMember(User leftChatMember) {
         this.leftChatMember = leftChatMember;
         return this;
     }
@@ -697,7 +697,7 @@ public class Message implements IUpdate {
      * @param newChatTitle the new chat title
      * @return the new chat title
      */
-    public Message setNewChatTitle(String newChatTitle) {
+    private Message setNewChatTitle(String newChatTitle) {
         this.newChatTitle = newChatTitle;
         return this;
     }
@@ -717,7 +717,7 @@ public class Message implements IUpdate {
      * @param newChatPhoto the new chat photo
      * @return the new chat photo
      */
-    public Message setNewChatPhoto(List<PhotoSize> newChatPhoto) {
+    private Message setNewChatPhoto(List<PhotoSize> newChatPhoto) {
         this.newChatPhoto = newChatPhoto;
         return this;
     }
@@ -737,7 +737,7 @@ public class Message implements IUpdate {
      * @param deleteChatPhoto the delete chat photo
      * @return the delete chat photo
      */
-    public Message setDeleteChatPhoto(Boolean deleteChatPhoto) {
+    private Message setDeleteChatPhoto(Boolean deleteChatPhoto) {
         this.deleteChatPhoto = deleteChatPhoto;
         return this;
     }
@@ -757,7 +757,7 @@ public class Message implements IUpdate {
      * @param groupChatCreated the group chat created
      * @return the group chat created
      */
-    public Message setGroupChatCreated(Boolean groupChatCreated) {
+    private Message setGroupChatCreated(Boolean groupChatCreated) {
         this.groupChatCreated = groupChatCreated;
         return this;
     }
@@ -777,7 +777,7 @@ public class Message implements IUpdate {
      * @param supergroupChatCreated the supergroup chat created
      * @return the supergroup chat created
      */
-    public Message setSupergroupChatCreated(Boolean supergroupChatCreated) {
+    private Message setSupergroupChatCreated(Boolean supergroupChatCreated) {
         this.supergroupChatCreated = supergroupChatCreated;
         return this;
     }
@@ -797,7 +797,7 @@ public class Message implements IUpdate {
      * @param channelChatCreated the channel chat created
      * @return the channel chat created
      */
-    public Message setChannelChatCreated(Boolean channelChatCreated) {
+    private Message setChannelChatCreated(Boolean channelChatCreated) {
         this.channelChatCreated = channelChatCreated;
         return this;
     }
@@ -817,7 +817,7 @@ public class Message implements IUpdate {
      * @param migrateToChatId the migrate to chat id
      * @return the migrate to chat id
      */
-    public Message setMigrateToChatId(Long migrateToChatId) {
+    private Message setMigrateToChatId(Long migrateToChatId) {
         this.migrateToChatId = migrateToChatId;
         return this;
     }
@@ -837,7 +837,7 @@ public class Message implements IUpdate {
      * @param migrateFromChatId the migrate from chat id
      * @return the migrate from chat id
      */
-    public Message setMigrateFromChatId(Long migrateFromChatId) {
+    private Message setMigrateFromChatId(Long migrateFromChatId) {
         this.migrateFromChatId = migrateFromChatId;
         return this;
     }
@@ -857,7 +857,7 @@ public class Message implements IUpdate {
      * @param pinnedMessage the pinned message
      * @return the pinned message
      */
-    public Message setPinnedMessage(Message pinnedMessage) {
+    private Message setPinnedMessage(Message pinnedMessage) {
         this.pinnedMessage = pinnedMessage;
         return this;
     }
@@ -877,7 +877,7 @@ public class Message implements IUpdate {
      * @param invoice the invoice
      * @return the invoice
      */
-    public Message setInvoice(Invoice invoice) {
+    private Message setInvoice(Invoice invoice) {
         this.invoice = invoice;
         return this;
     }
@@ -897,7 +897,7 @@ public class Message implements IUpdate {
      * @param successfulPayment the successful payment
      * @return the successful payment
      */
-    public Message setSuccessfulPayment(SuccessfulPayment successfulPayment) {
+    private Message setSuccessfulPayment(SuccessfulPayment successfulPayment) {
         this.successfulPayment = successfulPayment;
         return this;
     }

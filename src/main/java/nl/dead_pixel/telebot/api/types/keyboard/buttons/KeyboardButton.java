@@ -28,7 +28,7 @@ public class KeyboardButton {
      * @param text the text
      * @return the text
      */
-    public KeyboardButton setText(String text) {
+    private KeyboardButton setText(String text) {
         this.text = text;
         return this;
     }
@@ -48,7 +48,7 @@ public class KeyboardButton {
      * @param requestContact the request contact
      * @return the request contact
      */
-    public KeyboardButton setRequestContact(Boolean requestContact) {
+    private KeyboardButton setRequestContact(Boolean requestContact) {
         this.requestContact = requestContact;
         return this;
     }
@@ -68,7 +68,7 @@ public class KeyboardButton {
      * @param requestLocation the request location
      * @return the request location
      */
-    public KeyboardButton setRequestLocation(Boolean requestLocation) {
+    private KeyboardButton setRequestLocation(Boolean requestLocation) {
         this.requestLocation = requestLocation;
         return this;
     }

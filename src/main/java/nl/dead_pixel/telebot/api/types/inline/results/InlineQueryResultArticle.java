@@ -39,7 +39,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return type;
     }
 
-    public InlineQueryResultArticle setType(String type) {
+    private InlineQueryResultArticle setType(String type) {
         this.type = type;
         return this;
     }
@@ -48,7 +48,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return id;
     }
 
-    public InlineQueryResultArticle setId(String id) {
+    private InlineQueryResultArticle setId(String id) {
         this.id = id;
         return this;
     }
@@ -57,7 +57,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return title;
     }
 
-    public InlineQueryResultArticle setTitle(String title) {
+    private InlineQueryResultArticle setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -66,7 +66,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return inputMessageContent;
     }
 
-    public InlineQueryResultArticle setInputMessageContent(IInputMessageContent inputMessageContent) {
+    private InlineQueryResultArticle setInputMessageContent(IInputMessageContent inputMessageContent) {
         this.inputMessageContent = inputMessageContent;
         return this;
     }
@@ -75,7 +75,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return inlineKeyboardMarkup;
     }
 
-    public InlineQueryResultArticle setInlineKeyboardMarkup(InlineKeyboardMarkup inlineKeyboardMarkup) {
+    private InlineQueryResultArticle setInlineKeyboardMarkup(InlineKeyboardMarkup inlineKeyboardMarkup) {
         this.inlineKeyboardMarkup = Optional.of(inlineKeyboardMarkup);
         return this;
     }
@@ -84,7 +84,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return url;
     }
 
-    public InlineQueryResultArticle setUrl(String url) {
+    private InlineQueryResultArticle setUrl(String url) {
         this.url = Optional.of(url);
         return this;
     }
@@ -93,7 +93,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return hideUrl;
     }
 
-    public InlineQueryResultArticle setHideUrl(Boolean hideUrl) {
+    private InlineQueryResultArticle setHideUrl(Boolean hideUrl) {
         this.hideUrl = Optional.of(hideUrl);
         return this;
     }
@@ -102,7 +102,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return description;
     }
 
-    public InlineQueryResultArticle setDescription(String description) {
+    private InlineQueryResultArticle setDescription(String description) {
         this.description = Optional.of(description);
         return this;
     }
@@ -111,7 +111,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return thumbUrl;
     }
 
-    public InlineQueryResultArticle setThumbUrl(String thumbUrl) {
+    private InlineQueryResultArticle setThumbUrl(String thumbUrl) {
         this.thumbUrl = Optional.of(thumbUrl);
         return this;
     }
@@ -120,7 +120,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return thumbWidth;
     }
 
-    public InlineQueryResultArticle setThumbWidth(Long thumbWidth) {
+    private InlineQueryResultArticle setThumbWidth(Long thumbWidth) {
         this.thumbWidth = Optional.of(thumbWidth);
         return this;
     }
@@ -129,7 +129,7 @@ public class InlineQueryResultArticle implements IInlineQueryResult {
         return thumbHeight;
     }
 
-    public InlineQueryResultArticle setThumbHeight(Long thumbHeight) {
+    private InlineQueryResultArticle setThumbHeight(Long thumbHeight) {
         this.thumbHeight = Optional.of(thumbHeight);
         return this;
     }

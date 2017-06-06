@@ -36,7 +36,7 @@ public class SuccessfulPayment {
      * @param currency the currency
      * @return the currency
      */
-    public SuccessfulPayment setCurrency(String currency) {
+    private SuccessfulPayment setCurrency(String currency) {
         this.currency = currency;
         return this;
     }
@@ -56,7 +56,7 @@ public class SuccessfulPayment {
      * @param totalAmount the total amount
      * @return the total amount
      */
-    public SuccessfulPayment setTotalAmount(Long totalAmount) {
+    private SuccessfulPayment setTotalAmount(Long totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
@@ -76,7 +76,7 @@ public class SuccessfulPayment {
      * @param invoicePayload the invoice payload
      * @return the invoice payload
      */
-    public SuccessfulPayment setInvoicePayload(String invoicePayload) {
+    private SuccessfulPayment setInvoicePayload(String invoicePayload) {
         this.invoicePayload = invoicePayload;
         return this;
     }
@@ -96,7 +96,7 @@ public class SuccessfulPayment {
      * @param shippingOptionId the shipping option id
      * @return the shipping option id
      */
-    public SuccessfulPayment setShippingOptionId(String shippingOptionId) {
+    private SuccessfulPayment setShippingOptionId(String shippingOptionId) {
         this.shippingOptionId = shippingOptionId;
         return this;
     }
@@ -116,7 +116,7 @@ public class SuccessfulPayment {
      * @param orderInfo the order info
      * @return the order info
      */
-    public SuccessfulPayment setOrderInfo(OrderInfo orderInfo) {
+    private SuccessfulPayment setOrderInfo(OrderInfo orderInfo) {
         this.orderInfo = orderInfo;
         return this;
     }
@@ -136,7 +136,7 @@ public class SuccessfulPayment {
      * @param telegramPaymentChargeId the telegram payment charge id
      * @return the telegram payment charge id
      */
-    public SuccessfulPayment setTelegramPaymentChargeId(String telegramPaymentChargeId) {
+    private SuccessfulPayment setTelegramPaymentChargeId(String telegramPaymentChargeId) {
         this.telegramPaymentChargeId = telegramPaymentChargeId;
         return this;
     }
@@ -156,7 +156,7 @@ public class SuccessfulPayment {
      * @param providerPaymentChargeId the provider payment charge id
      * @return the provider payment charge id
      */
-    public SuccessfulPayment setProviderPaymentChargeId(String providerPaymentChargeId) {
+    private SuccessfulPayment setProviderPaymentChargeId(String providerPaymentChargeId) {
         this.providerPaymentChargeId = providerPaymentChargeId;
         return this;
     }

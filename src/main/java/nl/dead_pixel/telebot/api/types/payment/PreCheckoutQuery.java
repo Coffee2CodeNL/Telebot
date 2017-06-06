@@ -36,7 +36,7 @@ public class PreCheckoutQuery implements IUpdate {
      * @param id the id
      * @return the id
      */
-    public PreCheckoutQuery setId(String id) {
+    private PreCheckoutQuery setId(String id) {
         this.id = id;
         return this;
     }
@@ -56,7 +56,7 @@ public class PreCheckoutQuery implements IUpdate {
      * @param from the from
      * @return the from
      */
-    public PreCheckoutQuery setFrom(User from) {
+    private PreCheckoutQuery setFrom(User from) {
         this.from = from;
         return this;
     }
@@ -76,7 +76,7 @@ public class PreCheckoutQuery implements IUpdate {
      * @param currency the currency
      * @return the currency
      */
-    public PreCheckoutQuery setCurrency(String currency) {
+    private PreCheckoutQuery setCurrency(String currency) {
         this.currency = currency;
         return this;
     }
@@ -96,7 +96,7 @@ public class PreCheckoutQuery implements IUpdate {
      * @param totalAmount the total amount
      * @return the total amount
      */
-    public PreCheckoutQuery setTotalAmount(Long totalAmount) {
+    private PreCheckoutQuery setTotalAmount(Long totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
@@ -116,7 +116,7 @@ public class PreCheckoutQuery implements IUpdate {
      * @param invoicePayload the invoice payload
      * @return the invoice payload
      */
-    public PreCheckoutQuery setInvoicePayload(String invoicePayload) {
+    private PreCheckoutQuery setInvoicePayload(String invoicePayload) {
         this.invoicePayload = invoicePayload;
         return this;
     }
@@ -136,7 +136,7 @@ public class PreCheckoutQuery implements IUpdate {
      * @param shippingOptionId the shipping option id
      * @return the shipping option id
      */
-    public PreCheckoutQuery setShippingOptionId(String shippingOptionId) {
+    private PreCheckoutQuery setShippingOptionId(String shippingOptionId) {
         this.shippingOptionId = shippingOptionId;
         return this;
     }
@@ -156,7 +156,7 @@ public class PreCheckoutQuery implements IUpdate {
      * @param orderInfo the order info
      * @return the order info
      */
-    public PreCheckoutQuery setOrderInfo(OrderInfo orderInfo) {
+    private PreCheckoutQuery setOrderInfo(OrderInfo orderInfo) {
         this.orderInfo = orderInfo;
         return this;
     }

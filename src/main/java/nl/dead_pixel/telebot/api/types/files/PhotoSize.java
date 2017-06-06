@@ -30,7 +30,7 @@ public class PhotoSize implements IFile {
      * @param fileId the file id
      * @return the file id
      */
-    public PhotoSize setFileId(String fileId) {
+    private PhotoSize setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -50,7 +50,7 @@ public class PhotoSize implements IFile {
      * @param width the width
      * @return the width
      */
-    public PhotoSize setWidth(Long width) {
+    private PhotoSize setWidth(Long width) {
         this.width = width;
         return this;
     }
@@ -70,7 +70,7 @@ public class PhotoSize implements IFile {
      * @param height the height
      * @return the height
      */
-    public PhotoSize setHeight(Long height) {
+    private PhotoSize setHeight(Long height) {
         this.height = height;
         return this;
     }
@@ -90,7 +90,7 @@ public class PhotoSize implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public PhotoSize setFileSize(Long fileSize) {
+    private PhotoSize setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

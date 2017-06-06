@@ -27,7 +27,7 @@ public class ResponseParameters {
      * @param migrateToChatId the migrate to chat id
      * @return the migrate to chat id
      */
-    public ResponseParameters setMigrateToChatId(Long migrateToChatId) {
+    private ResponseParameters setMigrateToChatId(Long migrateToChatId) {
         this.migrateToChatId = migrateToChatId;
         return this;
     }
@@ -47,7 +47,7 @@ public class ResponseParameters {
      * @param retryAfter the retry after
      * @return the retry after
      */
-    public ResponseParameters setRetryAfter(Long retryAfter) {
+    private ResponseParameters setRetryAfter(Long retryAfter) {
         this.retryAfter = retryAfter;
         return this;
     }

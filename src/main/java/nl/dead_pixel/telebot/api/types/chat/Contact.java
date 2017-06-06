@@ -31,7 +31,7 @@ public class Contact {
      * @param phoneNumber the phone number
      * @return the phone number
      */
-    public Contact setPhoneNumber(String phoneNumber) {
+    private Contact setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
@@ -51,7 +51,7 @@ public class Contact {
      * @param firstName the first name
      * @return the first name
      */
-    public Contact setFirstName(String firstName) {
+    private Contact setFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
@@ -71,7 +71,7 @@ public class Contact {
      * @param lastName the last name
      * @return the last name
      */
-    public Contact setLastName(String lastName) {
+    private Contact setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
@@ -91,7 +91,7 @@ public class Contact {
      * @param userId the user id
      * @return the user id
      */
-    public Contact setUserId(Long userId) {
+    private Contact setUserId(Long userId) {
         this.userId = userId;
         return this;
     }

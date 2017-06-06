@@ -29,7 +29,7 @@ public class UserProfilePhotos {
      * @param totalCount the total count
      * @return the total count
      */
-    public UserProfilePhotos setTotalCount(Long totalCount) {
+    private UserProfilePhotos setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
@@ -49,7 +49,7 @@ public class UserProfilePhotos {
      * @param photos the photos
      * @return the photos
      */
-    public UserProfilePhotos setPhotos(List<List<PhotoSize>> photos) {
+    private UserProfilePhotos setPhotos(List<List<PhotoSize>> photos) {
         this.photos = photos;
         return this;
     }

@@ -26,7 +26,7 @@ public class ShippingOption {
      * @param id the id
      * @return the id
      */
-    public ShippingOption setId(String id) {
+    private ShippingOption setId(String id) {
         this.id = id;
         return this;
     }
@@ -46,7 +46,7 @@ public class ShippingOption {
      * @param title the title
      * @return the title
      */
-    public ShippingOption setTitle(String title) {
+    private ShippingOption setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -66,7 +66,7 @@ public class ShippingOption {
      * @param prices the prices
      * @return the prices
      */
-    public ShippingOption setPrices(List<LabeledPrice> prices) {
+    private ShippingOption setPrices(List<LabeledPrice> prices) {
         this.prices = prices;
         return this;
     }

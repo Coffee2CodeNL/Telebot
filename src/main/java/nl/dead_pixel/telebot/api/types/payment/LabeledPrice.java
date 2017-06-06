@@ -23,7 +23,7 @@ public class LabeledPrice {
      * @param label the label
      * @return the label
      */
-    public LabeledPrice setLabel(String label) {
+    private LabeledPrice setLabel(String label) {
         this.label = label;
         return this;
     }
@@ -43,7 +43,7 @@ public class LabeledPrice {
      * @param amount the amount
      * @return the amount
      */
-    public LabeledPrice setAmount(Long amount) {
+    private LabeledPrice setAmount(Long amount) {
         this.amount = amount;
         return this;
     }

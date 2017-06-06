@@ -23,7 +23,7 @@ public class ChatMember {
      * @param user the user
      * @return the user
      */
-    public ChatMember setUser(User user) {
+    private ChatMember setUser(User user) {
         this.user = user;
         return this;
     }
@@ -43,7 +43,7 @@ public class ChatMember {
      * @param status the status
      * @return the status
      */
-    public ChatMember setStatus(String status) {
+    private ChatMember setStatus(String status) {
         this.status = status;
         return this;
     }

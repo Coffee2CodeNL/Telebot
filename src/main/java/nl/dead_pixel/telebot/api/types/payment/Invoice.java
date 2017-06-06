@@ -30,7 +30,7 @@ public class Invoice {
      * @param title the title
      * @return the title
      */
-    public Invoice setTitle(String title) {
+    private Invoice setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -50,7 +50,7 @@ public class Invoice {
      * @param description the description
      * @return the description
      */
-    public Invoice setDescription(String description) {
+    private Invoice setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -70,7 +70,7 @@ public class Invoice {
      * @param startParameter the start parameter
      * @return the start parameter
      */
-    public Invoice setStartParameter(String startParameter) {
+    private Invoice setStartParameter(String startParameter) {
         this.startParameter = startParameter;
         return this;
     }
@@ -90,7 +90,7 @@ public class Invoice {
      * @param currency the currency
      * @return the currency
      */
-    public Invoice setCurrency(String currency) {
+    private Invoice setCurrency(String currency) {
         this.currency = currency;
         return this;
     }
@@ -110,7 +110,7 @@ public class Invoice {
      * @param totalAmount the total amount
      * @return the total amount
      */
-    public Invoice setTotalAmount(Long totalAmount) {
+    private Invoice setTotalAmount(Long totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }

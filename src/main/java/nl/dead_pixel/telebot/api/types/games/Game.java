@@ -35,7 +35,7 @@ public class Game {
      * @param title the title
      * @return the title
      */
-    public Game setTitle(String title) {
+    private Game setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -55,7 +55,7 @@ public class Game {
      * @param description the description
      * @return the description
      */
-    public Game setDescription(String description) {
+    private Game setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -75,7 +75,7 @@ public class Game {
      * @param photo the photo
      * @return the photo
      */
-    public Game setPhoto(List<PhotoSize> photo) {
+    private Game setPhoto(List<PhotoSize> photo) {
         this.photo = photo;
         return this;
     }
@@ -95,7 +95,7 @@ public class Game {
      * @param text the text
      * @return the text
      */
-    public Game setText(String text) {
+    private Game setText(String text) {
         this.text = text;
         return this;
     }
@@ -115,7 +115,7 @@ public class Game {
      * @param textEntities the text entities
      * @return the text entities
      */
-    public Game setTextEntities(List<MessageEntity> textEntities) {
+    private Game setTextEntities(List<MessageEntity> textEntities) {
         this.textEntities = textEntities;
         return this;
     }
@@ -135,7 +135,7 @@ public class Game {
      * @param animation the animation
      * @return the animation
      */
-    public Game setAnimation(Animation animation) {
+    private Game setAnimation(Animation animation) {
         this.animation = animation;
         return this;
     }

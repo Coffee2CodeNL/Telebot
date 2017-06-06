@@ -35,7 +35,7 @@ public class InlineKeyboardButton {
      * @param text the text
      * @return the text
      */
-    public InlineKeyboardButton setText(String text) {
+    private InlineKeyboardButton setText(String text) {
         this.text = text;
         return this;
     }
@@ -55,7 +55,7 @@ public class InlineKeyboardButton {
      * @param url the url
      * @return the url
      */
-    public InlineKeyboardButton setUrl(String url) {
+    private InlineKeyboardButton setUrl(String url) {
         this.url = url;
         return this;
     }
@@ -75,7 +75,7 @@ public class InlineKeyboardButton {
      * @param callbackData the callback data
      * @return the callback data
      */
-    public InlineKeyboardButton setCallbackData(String callbackData) {
+    private InlineKeyboardButton setCallbackData(String callbackData) {
         this.callbackData = callbackData;
         return this;
     }
@@ -95,7 +95,7 @@ public class InlineKeyboardButton {
      * @param switchInlineQuery the switch inline query
      * @return the switch inline query
      */
-    public InlineKeyboardButton setSwitchInlineQuery(String switchInlineQuery) {
+    private InlineKeyboardButton setSwitchInlineQuery(String switchInlineQuery) {
         this.switchInlineQuery = switchInlineQuery;
         return this;
     }
@@ -115,7 +115,7 @@ public class InlineKeyboardButton {
      * @param switchInlineQueryCurrentChat the switch inline query current chat
      * @return the switch inline query current chat
      */
-    public InlineKeyboardButton setSwitchInlineQueryCurrentChat(String switchInlineQueryCurrentChat) {
+    private InlineKeyboardButton setSwitchInlineQueryCurrentChat(String switchInlineQueryCurrentChat) {
         this.switchInlineQueryCurrentChat = switchInlineQueryCurrentChat;
         return this;
     }
@@ -135,7 +135,7 @@ public class InlineKeyboardButton {
      * @param callbackGame the callback game
      * @return the callback game
      */
-    public InlineKeyboardButton setCallbackGame(CallbackGame callbackGame) {
+    private InlineKeyboardButton setCallbackGame(CallbackGame callbackGame) {
         this.callbackGame = callbackGame;
         return this;
     }
@@ -155,7 +155,7 @@ public class InlineKeyboardButton {
      * @param pay the pay
      * @return the pay
      */
-    public InlineKeyboardButton setPay(Boolean pay) {
+    private InlineKeyboardButton setPay(Boolean pay) {
         this.pay = pay;
         return this;
     }

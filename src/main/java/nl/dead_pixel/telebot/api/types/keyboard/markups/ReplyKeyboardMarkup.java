@@ -33,7 +33,7 @@ public class ReplyKeyboardMarkup implements IReplyMarkup {
      * @param keyboard the keyboard
      * @return the keyboard
      */
-    public ReplyKeyboardMarkup setKeyboard(List<List<KeyboardButton>> keyboard) {
+    private ReplyKeyboardMarkup setKeyboard(List<List<KeyboardButton>> keyboard) {
         this.keyboard = keyboard;
         return this;
     }
@@ -53,7 +53,7 @@ public class ReplyKeyboardMarkup implements IReplyMarkup {
      * @param resizeKeyboard the resize keyboard
      * @return the resize keyboard
      */
-    public ReplyKeyboardMarkup setResizeKeyboard(Boolean resizeKeyboard) {
+    private ReplyKeyboardMarkup setResizeKeyboard(Boolean resizeKeyboard) {
         this.resizeKeyboard = resizeKeyboard;
         return this;
     }
@@ -73,7 +73,7 @@ public class ReplyKeyboardMarkup implements IReplyMarkup {
      * @param oneTimeKeyboard the one time keyboard
      * @return the one time keyboard
      */
-    public ReplyKeyboardMarkup setOneTimeKeyboard(Boolean oneTimeKeyboard) {
+    private ReplyKeyboardMarkup setOneTimeKeyboard(Boolean oneTimeKeyboard) {
         this.oneTimeKeyboard = oneTimeKeyboard;
         return this;
     }
@@ -93,7 +93,7 @@ public class ReplyKeyboardMarkup implements IReplyMarkup {
      * @param selective the selective
      * @return the selective
      */
-    public ReplyKeyboardMarkup setSelective(Boolean selective) {
+    private ReplyKeyboardMarkup setSelective(Boolean selective) {
         this.selective = selective;
         return this;
     }

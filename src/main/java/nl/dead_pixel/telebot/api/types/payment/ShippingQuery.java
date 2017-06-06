@@ -31,7 +31,7 @@ public class ShippingQuery implements IUpdate {
      * @param id the id
      * @return the id
      */
-    public ShippingQuery setId(String id) {
+    private ShippingQuery setId(String id) {
         this.id = id;
         return this;
     }
@@ -51,7 +51,7 @@ public class ShippingQuery implements IUpdate {
      * @param user the user
      * @return the user
      */
-    public ShippingQuery setUser(User user) {
+    private ShippingQuery setUser(User user) {
         this.user = user;
         return this;
     }
@@ -71,7 +71,7 @@ public class ShippingQuery implements IUpdate {
      * @param invoicePayload the invoice payload
      * @return the invoice payload
      */
-    public ShippingQuery setInvoicePayload(String invoicePayload) {
+    private ShippingQuery setInvoicePayload(String invoicePayload) {
         this.invoicePayload = invoicePayload;
         return this;
     }
@@ -91,7 +91,7 @@ public class ShippingQuery implements IUpdate {
      * @param shippingAddress the shipping address
      * @return the shipping address
      */
-    public ShippingQuery setShippingAddress(ShippingAddress shippingAddress) {
+    private ShippingQuery setShippingAddress(ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }

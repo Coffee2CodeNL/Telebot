@@ -32,7 +32,7 @@ public class Sticker implements IFile {
      * @param fileId the file id
      * @return the file id
      */
-    public Sticker setFileId(String fileId) {
+    private Sticker setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -52,7 +52,7 @@ public class Sticker implements IFile {
      * @param width the width
      * @return the width
      */
-    public Sticker setWidth(Long width) {
+    private Sticker setWidth(Long width) {
         this.width = width;
         return this;
     }
@@ -72,7 +72,7 @@ public class Sticker implements IFile {
      * @param height the height
      * @return the height
      */
-    public Sticker setHeight(Long height) {
+    private Sticker setHeight(Long height) {
         this.height = height;
         return this;
     }
@@ -92,7 +92,7 @@ public class Sticker implements IFile {
      * @param thumb the thumb
      * @return the thumb
      */
-    public Sticker setThumb(PhotoSize thumb) {
+    private Sticker setThumb(PhotoSize thumb) {
         this.thumb = thumb;
         return this;
     }
@@ -112,7 +112,7 @@ public class Sticker implements IFile {
      * @param emoji the emoji
      * @return the emoji
      */
-    public Sticker setEmoji(String emoji) {
+    private Sticker setEmoji(String emoji) {
         this.emoji = emoji;
         return this;
     }
@@ -132,7 +132,7 @@ public class Sticker implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Sticker setFileSize(Long fileSize) {
+    private Sticker setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

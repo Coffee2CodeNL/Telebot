@@ -33,7 +33,7 @@ public class Audio implements IFile {
      * @param fileId the file id
      * @return the file id
      */
-    public Audio setFileId(String fileId) {
+    private Audio setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -53,7 +53,7 @@ public class Audio implements IFile {
      * @param duration the duration
      * @return the duration
      */
-    public Audio setDuration(Long duration) {
+    private Audio setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
@@ -73,7 +73,7 @@ public class Audio implements IFile {
      * @param performer the performer
      * @return the performer
      */
-    public Audio setPerformer(String performer) {
+    private Audio setPerformer(String performer) {
         this.performer = performer;
         return this;
     }
@@ -93,7 +93,7 @@ public class Audio implements IFile {
      * @param title the title
      * @return the title
      */
-    public Audio setTitle(String title) {
+    private Audio setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -113,7 +113,7 @@ public class Audio implements IFile {
      * @param mimeType the mime type
      * @return the mime type
      */
-    public Audio setMimeType(String mimeType) {
+    private Audio setMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
@@ -133,7 +133,7 @@ public class Audio implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Audio setFileSize(Long fileSize) {
+    private Audio setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

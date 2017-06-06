@@ -24,7 +24,7 @@ public class ApiResponse<T> {
      * @param ok the ok
      * @return the ok
      */
-    public ApiResponse setOk(Boolean ok) {
+    private ApiResponse setOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
@@ -44,7 +44,7 @@ public class ApiResponse<T> {
      * @param result the result
      * @return the result
      */
-    public ApiResponse setResult(T result) {
+    private ApiResponse setResult(T result) {
         this.result = result;
         return this;
     }

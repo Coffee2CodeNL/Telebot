@@ -33,7 +33,7 @@ public class Animation implements IFile {
      * @param fileId the file id
      * @return the file id
      */
-    public Animation setFileId(String fileId) {
+    private Animation setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -53,7 +53,7 @@ public class Animation implements IFile {
      * @param thumb the thumb
      * @return the thumb
      */
-    public Animation setThumb(PhotoSize thumb) {
+    private Animation setThumb(PhotoSize thumb) {
         this.thumb = thumb;
         return this;
     }
@@ -73,7 +73,7 @@ public class Animation implements IFile {
      * @param fileName the file name
      * @return the file name
      */
-    public Animation setFileName(String fileName) {
+    private Animation setFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
@@ -93,7 +93,7 @@ public class Animation implements IFile {
      * @param mimeType the mime type
      * @return the mime type
      */
-    public Animation setMimeType(String mimeType) {
+    private Animation setMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
@@ -113,7 +113,7 @@ public class Animation implements IFile {
      * @param fileSize the file size
      * @return the file size
      */
-    public Animation setFileSize(Long fileSize) {
+    private Animation setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }

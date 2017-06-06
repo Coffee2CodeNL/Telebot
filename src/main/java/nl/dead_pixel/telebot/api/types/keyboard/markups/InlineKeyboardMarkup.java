@@ -27,7 +27,7 @@ public class InlineKeyboardMarkup implements IReplyMarkup {
      * @param inlineKeyboard the inline keyboard
      * @return the inline keyboard
      */
-    public InlineKeyboardMarkup setInlineKeyboard(List<List<InlineKeyboardButton>> inlineKeyboard) {
+    private InlineKeyboardMarkup setInlineKeyboard(List<List<InlineKeyboardButton>> inlineKeyboard) {
         this.inlineKeyboard = inlineKeyboard;
         return this;
     }

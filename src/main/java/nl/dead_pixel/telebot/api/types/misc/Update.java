@@ -58,7 +58,7 @@ public class Update {
      * @param message the message
      * @return the message
      */
-    public Update setMessage(Message message) {
+    private Update setMessage(Message message) {
         this.message = message;
         return this;
     }
@@ -78,7 +78,7 @@ public class Update {
      * @param editedMessage the edited message
      * @return the edited message
      */
-    public Update setEditedMessage(Message editedMessage) {
+    private Update setEditedMessage(Message editedMessage) {
         this.editedMessage = editedMessage;
         return this;
     }
@@ -98,7 +98,7 @@ public class Update {
      * @param channelPost the channel post
      * @return the channel post
      */
-    public Update setChannelPost(Message channelPost) {
+    private Update setChannelPost(Message channelPost) {
         this.channelPost = channelPost;
         return this;
     }
@@ -118,7 +118,7 @@ public class Update {
      * @param editedChannelPost the edited channel post
      * @return the edited channel post
      */
-    public Update setEditedChannelPost(Message editedChannelPost) {
+    private Update setEditedChannelPost(Message editedChannelPost) {
         this.editedChannelPost = editedChannelPost;
         return this;
     }
@@ -138,7 +138,7 @@ public class Update {
      * @param inlineQuery the inline query
      * @return the inline query
      */
-    public Update setInlineQuery(InlineQuery inlineQuery) {
+    private Update setInlineQuery(InlineQuery inlineQuery) {
         this.inlineQuery = inlineQuery;
         return this;
     }
@@ -158,7 +158,7 @@ public class Update {
      * @param chosenInlineResult the chosen inline result
      * @return the chosen inline result
      */
-    public Update setChosenInlineResult(ChosenInlineResult chosenInlineResult) {
+    private Update setChosenInlineResult(ChosenInlineResult chosenInlineResult) {
         this.chosenInlineResult = chosenInlineResult;
         return this;
     }
@@ -178,7 +178,7 @@ public class Update {
      * @param callbackQuery the callback query
      * @return the callback query
      */
-    public Update setCallbackQuery(CallbackQuery callbackQuery) {
+    private Update setCallbackQuery(CallbackQuery callbackQuery) {
         this.callbackQuery = callbackQuery;
         return this;
     }
@@ -198,7 +198,7 @@ public class Update {
      * @param shippingQuery the shipping query
      * @return the shipping query
      */
-    public Update setShippingQuery(ShippingQuery shippingQuery) {
+    private Update setShippingQuery(ShippingQuery shippingQuery) {
         this.shippingQuery = shippingQuery;
         return this;
     }
@@ -218,24 +218,8 @@ public class Update {
      * @param preCheckoutQuery the pre checkout query
      * @return the pre checkout query
      */
-    public Update setPreCheckoutQuery(PreCheckoutQuery preCheckoutQuery) {
+    private Update setPreCheckoutQuery(PreCheckoutQuery preCheckoutQuery) {
         this.preCheckoutQuery = preCheckoutQuery;
         return this;
-    }
-
-    public String getTextFromMessage() {
-        return this.getMessage().getText();
-    }
-
-    public Boolean hasBotCommands() {
-        return getMessage() != null && getMessage().getEntities() != null;
-    }
-
-    public Long getChatId() {
-        return getMessage().getChat().getId() == null ? 0 : getMessage().getChat().getId();
-    }
-
-    public Long getMessageId() {
-        return getMessage().getMessageId() == null ? 0 : getMessage().getMessageId();
     }
 }

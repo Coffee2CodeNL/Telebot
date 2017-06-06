@@ -31,7 +31,7 @@ public class User {
      * @param id the id
      * @return the id
      */
-    public User setId(Long id) {
+    private User setId(Long id) {
         this.id = id;
         return this;
     }
@@ -51,7 +51,7 @@ public class User {
      * @param firstName the first name
      * @return the first name
      */
-    public User setFirstName(String firstName) {
+    private User setFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
@@ -71,7 +71,7 @@ public class User {
      * @param lastName the last name
      * @return the last name
      */
-    public User setLastName(String lastName) {
+    private User setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
@@ -91,7 +91,7 @@ public class User {
      * @param username the username
      * @return the username
      */
-    public User setUsername(String username) {
+    private User setUsername(String username) {
         this.username = username;
         return this;
     }
@@ -111,7 +111,7 @@ public class User {
      * @param languageCode the language code
      * @return the language code
      */
-    public User setLanguageCode(String languageCode) {
+    private User setLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }

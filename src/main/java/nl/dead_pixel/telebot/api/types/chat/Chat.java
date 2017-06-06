@@ -33,7 +33,7 @@ public class Chat {
      * @param id the id
      * @return The current {@link Chat} object
      */
-    public Chat setId(Long id) {
+    private Chat setId(Long id) {
         this.id = id;
         return this;
     }
@@ -53,7 +53,7 @@ public class Chat {
      * @param type the type
      * @return The current {@link Chat} object
      */
-    public Chat setType(String type) {
+    private Chat setType(String type) {
         this.type = type;
         return this;
     }
@@ -73,7 +73,7 @@ public class Chat {
      * @param title the title
      * @return The current {@link Chat} object
      */
-    public Chat setTitle(String title) {
+    private Chat setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -93,7 +93,7 @@ public class Chat {
      * @param username the username
      * @return The current {@link Chat} object
      */
-    public Chat setUsername(String username) {
+    private Chat setUsername(String username) {
         this.username = username;
         return this;
     }
@@ -113,7 +113,7 @@ public class Chat {
      * @param firstName the first name
      * @return The current {@link Chat} object
      */
-    public Chat setFirstName(String firstName) {
+    private Chat setFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
@@ -133,7 +133,7 @@ public class Chat {
      * @param lastName the last name
      * @return The current {@link Chat} object
      */
-    public Chat setLastName(String lastName) {
+    private Chat setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
@@ -153,7 +153,7 @@ public class Chat {
      * @param allMembersAreAdministrators If True, All members are administrators in this chat.
      * @return The current {@link Chat} object
      */
-    public Chat setAllMembersAreAdministrators(Boolean allMembersAreAdministrators) {
+    private Chat setAllMembersAreAdministrators(Boolean allMembersAreAdministrators) {
         this.allMembersAreAdministrators = allMembersAreAdministrators;
         return this;
     }

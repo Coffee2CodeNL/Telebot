@@ -5,15 +5,15 @@ package nl.dead_pixel.telebot.api.types.chat;
  * The type Location.
  */
 public class Location {
-    private float longitude;
-    private float latitude;
+    private Float longitude;
+    private Float latitude;
 
     /**
      * Gets longitude.
      *
      * @return the longitude
      */
-    public float getLongitude() {
+    public Float getLongitude() {
         return longitude;
     }
 
@@ -23,7 +23,7 @@ public class Location {
      * @param longitude the longitude
      * @return the longitude
      */
-    public Location setLongitude(float longitude) {
+    private Location setLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
     }
@@ -33,7 +33,7 @@ public class Location {
      *
      * @return the latitude
      */
-    public float getLatitude() {
+    public Float getLatitude() {
         return latitude;
     }
 
@@ -43,7 +43,7 @@ public class Location {
      * @param latitude the latitude
      * @return the latitude
      */
-    public Location setLatitude(float latitude) {
+    private Location setLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
     }

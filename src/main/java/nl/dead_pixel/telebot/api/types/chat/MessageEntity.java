@@ -26,7 +26,7 @@ public class MessageEntity {
      * @param type the type
      * @return the type
      */
-    public MessageEntity setType(String type) {
+    private MessageEntity setType(String type) {
         this.type = type;
         return this;
     }
@@ -46,7 +46,7 @@ public class MessageEntity {
      * @param offset the offset
      * @return the offset
      */
-    public MessageEntity setOffset(Long offset) {
+    private MessageEntity setOffset(Long offset) {
         this.offset = offset;
         return this;
     }
@@ -66,7 +66,7 @@ public class MessageEntity {
      * @param length the length
      * @return the length
      */
-    public MessageEntity setLength(Long length) {
+    private MessageEntity setLength(Long length) {
         this.length = length;
         return this;
     }
@@ -86,7 +86,7 @@ public class MessageEntity {
      * @param url the url
      * @return the url
      */
-    public MessageEntity setUrl(String url) {
+    private MessageEntity setUrl(String url) {
         this.url = url;
         return this;
     }
@@ -106,7 +106,7 @@ public class MessageEntity {
      * @param user the user
      * @return the user
      */
-    public MessageEntity setUser(User user) {
+    private MessageEntity setUser(User user) {
         this.user = user;
         return this;
     }
