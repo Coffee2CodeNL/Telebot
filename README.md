@@ -6,10 +6,11 @@ The whole library is based on RxJava2 and Retrofit.
 ## Documentation
   
 1. Initialize the library  
-    **This must be called before adding plugins!**  
-    ```
+    **This must be called before adding plugins!**  
+    ```
     Telebot.init(Token, Executors.newFixedThreadPool(4));
-    ``` 
+    ```
+
     Where the token is a field in your main class:
     `private static final String Token = "<Token here>"` 
 
