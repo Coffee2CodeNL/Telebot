@@ -57,7 +57,7 @@ The whole library is based on RxJava2 and Retrofit.
     ```
 
 ## Extras
-*For IntelliJ IDEA users, here's a Live Template!*
+#### IntelliJ IDEA Live Template
 ```
 public class StickerFilterPlugin extends nl.dead_pixel.telebot.api.plugin.Plugin<$type$> {
     @java.lang.Override
@@ -72,7 +72,8 @@ public class StickerFilterPlugin extends nl.dead_pixel.telebot.api.plugin.Plugin
     }
 }
 ```
-
+#### Javadoc
+[Javadoc](https://isdp.github.io/Telebot/)
 ## Roadmap
 This is a list of the methods and types that still need to be implemented.
 
