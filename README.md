@@ -3,8 +3,13 @@ Java Telegram Bot API Library [![Build Status](https://travis-ci.org/iSDP/Telebo
 This library is meant to be used to create Telegram bots with ease, while allowing jobs to run in seperate threads.  
 The whole library is based on RxJava2 and Retrofit.
 
+**Gradle**
+``` 
+compile 'nl.dead-pixel.telebot:telebot:0.3.0'
+```
+
 ## State of the Library
-This library is currently at version 0.2.0.  
+This library is currently at version 0.3.0.  
 Most of the Javadocs have been auto-generated and are in need of fixing.  
 I do **NOT** deem it stable, but it's in a state that it can actually receive and send messages, and use most [methods defined in the API](https://github.com/iSDP/Telebot/blob/master/src/main/java/nl/dead_pixel/telebot/api/retrofit/TelegramBotApiService.java).
 
