@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nl.dead_pixel.telebot.api.plugin;
+package nl.dead_pixel.telebot.plugin;
 
-import nl.dead_pixel.telebot.api.Telebot;
-import nl.dead_pixel.telebot.api.interfaces.IPlugin;
-import nl.dead_pixel.telebot.api.retrofit.TelegramBotApiService;
+import nl.dead_pixel.telebot.Telebot;
+import nl.dead_pixel.telebot.interfaces.IPlugin;
+import nl.dead_pixel.telebot.retrofit.TelegramBotApiService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

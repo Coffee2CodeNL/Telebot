@@ -13,13 +13,13 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package nl.dead_pixel.telebot.api.interfaces;
+package nl.dead_pixel.telebot.interfaces;
 
 /**
- * The interface Input message content.
+ * The interface Inline query result.
  *
  * @author ReSco
- * @since 22 :45 2-6-2017
+ * @since 22 :33 2-6-2017
  */
-public interface IInputMessageContent {
+public interface IInlineQueryResult {
 }

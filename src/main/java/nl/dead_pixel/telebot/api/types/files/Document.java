@@ -16,10 +16,10 @@
 package nl.dead_pixel.telebot.api.types.files;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import nl.dead_pixel.telebot.api.interfaces.IFile;
+import nl.dead_pixel.telebot.interfaces.IFile;
 
 /**
- * Document type
+ * Document type.
  * <p>
  * Created by @iSDP on 22-5-2017
  */

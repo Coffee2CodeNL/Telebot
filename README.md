@@ -84,7 +84,7 @@ public class ExampleBot {
 ## Extras
 #### IntelliJ IDEA Live Template
 ```java
-public class $name$Plugin extends nl.dead_pixel.telebot.api.plugin.Plugin<$type$> {
+public class $name$Plugin extends nl.dead_pixel.telebot.plugin.Plugin<$type$> {
     @java.lang.Override
     public void pluginBody($type$ update) {
         $SELECTION$

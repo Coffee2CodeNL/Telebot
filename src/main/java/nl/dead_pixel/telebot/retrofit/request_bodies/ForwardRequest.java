@@ -13,7 +13,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package nl.dead_pixel.telebot.api.retrofit.request_bodies;
+package nl.dead_pixel.telebot.retrofit.request_bodies;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;

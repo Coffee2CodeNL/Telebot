@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>nl.dead_pixel.telebot.api.Telebot</li>
+<li>nl.dead_pixel.telebot.Telebot</li>
 </ul>
 </li>
 </ul>
@@ -141,18 +141,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../nl/dead_pixel/telebot/api/Telebot.html#addPlugin-nl.dead_pixel.telebot.api.interfaces.IPlugin-">addPlugin</a></span>(<a href="../../../../nl/dead_pixel/telebot/api/interfaces/IPlugin.html" title="interface in nl.dead_pixel.telebot.api.interfaces">IPlugin</a>&nbsp;plugin)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../nl/dead_pixel/telebot/api/Telebot.html#addPlugin-nl.dead_pixel.telebot.interfaces.IPlugin-">addPlugin</a></span>(<a href="../../../../nl/dead_pixel/telebot/api/interfaces/IPlugin.html" title="interface in nl.dead_pixel.telebot.interfaces">IPlugin</a>&nbsp;plugin)</code>
 <div class="block">Add plugin.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../nl/dead_pixel/telebot/api/retrofit/TelegramBotApiService.html" title="interface in nl.dead_pixel.telebot.api.retrofit">TelegramBotApiService</a></code></td>
+<td class="colFirst"><code>static <a href="../../../../nl/dead_pixel/telebot/api/retrofit/TelegramBotApiService.html" title="interface in nl.dead_pixel.telebot.retrofit">TelegramBotApiService</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../nl/dead_pixel/telebot/api/Telebot.html#getApiService-java.lang.Boolean-">getApiService</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;enableHTTPLogging)</code>
 <div class="block">Gets api service.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>static io.reactivex.Observable&lt;<a href="../../../../nl/dead_pixel/telebot/api/interfaces/IUpdate.html" title="interface in nl.dead_pixel.telebot.api.interfaces">IUpdate</a>&gt;</code></td>
+<td class="colFirst"><code>static io.reactivex.Observable&lt;<a href="../../../../nl/dead_pixel/telebot/api/interfaces/IUpdate.html" title="interface in nl.dead_pixel.telebot.interfaces">IUpdate</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../nl/dead_pixel/telebot/api/Telebot.html#getUpdateObservable--">getUpdateObservable</a></span>()</code>
 <div class="block">Gets update observable.</div>
 </td>
@@ -209,7 +209,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getUpdateObservable</h4>
-<pre>public static&nbsp;io.reactivex.Observable&lt;<a href="../../../../nl/dead_pixel/telebot/api/interfaces/IUpdate.html" title="interface in nl.dead_pixel.telebot.api.interfaces">IUpdate</a>&gt;&nbsp;getUpdateObservable()</pre>
+<pre>public static&nbsp;io.reactivex.Observable&lt;<a href="../../../../nl/dead_pixel/telebot/api/interfaces/IUpdate.html" title="interface in nl.dead_pixel.telebot.interfaces">IUpdate</a>&gt;&nbsp;getUpdateObservable()</pre>
 <div class="block">Gets update observable.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -223,7 +223,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getApiService</h4>
-<pre>public static&nbsp;<a href="../../../../nl/dead_pixel/telebot/api/retrofit/TelegramBotApiService.html" title="interface in nl.dead_pixel.telebot.api.retrofit">TelegramBotApiService</a>&nbsp;getApiService(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;enableHTTPLogging)</pre>
+<pre>public static&nbsp;<a href="../../../../nl/dead_pixel/telebot/api/retrofit/TelegramBotApiService.html" title="interface in nl.dead_pixel.telebot.retrofit">TelegramBotApiService</a>&nbsp;getApiService(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;enableHTTPLogging)</pre>
 <div class="block">Gets api service.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -233,13 +233,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="addPlugin-nl.dead_pixel.telebot.api.interfaces.IPlugin-">
+<a name="addPlugin-nl.dead_pixel.telebot.interfaces.IPlugin-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addPlugin</h4>
-<pre>public static&nbsp;void&nbsp;addPlugin(<a href="../../../../nl/dead_pixel/telebot/api/interfaces/IPlugin.html" title="interface in nl.dead_pixel.telebot.api.interfaces">IPlugin</a>&nbsp;plugin)</pre>
+<pre>public static&nbsp;void&nbsp;addPlugin(<a href="../../../../nl/dead_pixel/telebot/api/interfaces/IPlugin.html" title="interface in nl.dead_pixel.telebot.interfaces">IPlugin</a>&nbsp;plugin)</pre>
 <div class="block">Add plugin.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>

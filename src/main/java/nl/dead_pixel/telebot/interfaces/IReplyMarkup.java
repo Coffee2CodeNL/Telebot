@@ -13,11 +13,11 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package nl.dead_pixel.telebot.api.interfaces;
+package nl.dead_pixel.telebot.interfaces;
 
 
 /**
- * The interface File.
+ * The interface Reply markup.
  */
-public interface IFile {
+public interface IReplyMarkup {
 }

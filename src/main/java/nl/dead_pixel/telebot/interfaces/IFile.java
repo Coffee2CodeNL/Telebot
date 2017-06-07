@@ -13,19 +13,11 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package nl.dead_pixel.telebot.api.plugin;
+package nl.dead_pixel.telebot.interfaces;
+
 
 /**
- * The AdminPlugin type.
+ * The interface File.
  */
-public abstract class AdminPlugin extends Plugin {
-    protected AdminPlugin(Class clazz) {
-        super(clazz);
-    }
-
-    @Override
-    public void subscribe() {
-        // TODO: Add authorization logic here.
-        super.subscribe();
-    }
+public interface IFile {
 }

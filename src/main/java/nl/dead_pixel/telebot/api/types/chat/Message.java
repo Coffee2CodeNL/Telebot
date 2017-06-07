@@ -16,7 +16,7 @@
 package nl.dead_pixel.telebot.api.types.chat;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import nl.dead_pixel.telebot.api.interfaces.IUpdate;
+import nl.dead_pixel.telebot.interfaces.IUpdate;
 import nl.dead_pixel.telebot.api.types.files.*;
 import nl.dead_pixel.telebot.api.types.games.Game;
 import nl.dead_pixel.telebot.api.types.payment.Invoice;

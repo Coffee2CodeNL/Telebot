@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nl.dead_pixel.telebot.api;
+package nl.dead_pixel.telebot;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.schedulers.Schedulers;
-import nl.dead_pixel.telebot.api.interfaces.IPlugin;
-import nl.dead_pixel.telebot.api.interfaces.IUpdate;
-import nl.dead_pixel.telebot.api.retrofit.TelegramBotApiService;
+import nl.dead_pixel.telebot.interfaces.IPlugin;
+import nl.dead_pixel.telebot.interfaces.IUpdate;
+import nl.dead_pixel.telebot.retrofit.TelegramBotApiService;
 import nl.dead_pixel.telebot.api.types.helpers.ChannelPost;
 import nl.dead_pixel.telebot.api.types.helpers.CommandMessage;
 import nl.dead_pixel.telebot.api.types.helpers.EditedChannelPost;

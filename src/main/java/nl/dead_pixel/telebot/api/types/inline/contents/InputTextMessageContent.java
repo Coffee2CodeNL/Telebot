@@ -16,7 +16,7 @@
 package nl.dead_pixel.telebot.api.types.inline.contents;
 
 
-import nl.dead_pixel.telebot.api.interfaces.IInputMessageContent;
+import nl.dead_pixel.telebot.interfaces.IInputMessageContent;
 
 /**
  * InputTextMessageContent object.

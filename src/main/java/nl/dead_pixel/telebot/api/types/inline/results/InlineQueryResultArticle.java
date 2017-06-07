@@ -16,8 +16,8 @@
 package nl.dead_pixel.telebot.api.types.inline.results;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import nl.dead_pixel.telebot.api.interfaces.IInlineQueryResult;
-import nl.dead_pixel.telebot.api.interfaces.IInputMessageContent;
+import nl.dead_pixel.telebot.interfaces.IInlineQueryResult;
+import nl.dead_pixel.telebot.interfaces.IInputMessageContent;
 import nl.dead_pixel.telebot.api.types.keyboard.markups.InlineKeyboardMarkup;
 
 import java.util.Optional;

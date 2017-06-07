@@ -13,13 +13,17 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package nl.dead_pixel.telebot.api.retrofit.answer_bodies;
+package nl.dead_pixel.telebot.interfaces;
 
 /**
- * The type Callback query answer.
+ * The interface Plugin.
  *
  * @author ReSco
- * @since 22 :33 2-6-2017
+ * @since 11 :49 6-6-2017
  */
-public class CallbackQueryAnswer {
+public interface IPlugin {
+    /**
+     * Subscribe.
+     */
+    void subscribe();
 }

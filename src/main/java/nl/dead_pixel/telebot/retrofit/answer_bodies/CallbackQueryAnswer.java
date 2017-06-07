@@ -13,13 +13,13 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package nl.dead_pixel.telebot.api.interfaces;
+package nl.dead_pixel.telebot.retrofit.answer_bodies;
 
 /**
- * The interface Inline query result.
+ * The type Callback query answer.
  *
  * @author ReSco
  * @since 22 :33 2-6-2017
  */
-public interface IInlineQueryResult {
+public class CallbackQueryAnswer {
 }

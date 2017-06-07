@@ -4,11 +4,12 @@ plugins {
     id "java"
     id "idea"
     id "checkstyle"
-    id "maven-publish"
+    id "signing"
+    id "maven"
 }
 
-group 'nl.dead_pixel.telebot'
-version '0.2.0'
+group 'nl.dead-pixel.telebot'
+version '0.3.0'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -47,6 +48,7 @@ task copyStylesheet(type: Copy) {
     into 'docs'
     rename 'javadoc_(stylesheet.css)', '$1'
 }
+
 license {
     ext.year = Calendar.getInstance().get(Calendar.YEAR)
     ext.name = 'Remon Schopmeijer (7914 7FFF 4E3C 86DE)'
@@ -54,6 +56,69 @@ license {
     header = file('LICENSE.header')
     strictCheck = true
 }
+
+uploadArchives {
+    repositories.mavenDeployer {
+            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            pom.project {
+                name 'Telebot'
+                packaging 'jar'
+                // optionally artifactId can be defined here
+                description 'Java Telegram Bot API Library, Uses RxJava2 and Retrofit'
+                url 'https://github.com/iSDP/Telebot'
+
+                scm {
+                    connection 'scm:git:https://github.com/iSDP/Telebot.git'
+                    developerConnection 'scm:git:https://github.com/iSDP/Telebot.git'
+                    url 'https://github.com/iSDP/Telebot'
+                }
+
+                licenses {
+                    license {
+                        name 'The Apache License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'iSDP'
+                        name 'Remon Schopmeijer'
+                        email 'remon@dead-pixel.nl'
+                    }
+                }
+            }
+        }
+
+}
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+signing {
+    sign configurations.archives
+}
+
 
 dependencies {
     testCompile 'junit:junit:4.12'

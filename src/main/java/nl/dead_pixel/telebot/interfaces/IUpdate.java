@@ -13,11 +13,13 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package nl.dead_pixel.telebot.api.interfaces;
-
+package nl.dead_pixel.telebot.interfaces;
 
 /**
- * The interface Response type.
+ * The interface Update.
+ *
+ * @author ReSco
+ * @since 19 :21 6-6-2017
  */
-public interface IResponseType {
+public interface IUpdate {
 }

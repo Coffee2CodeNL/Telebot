@@ -1,9 +1,4 @@
-nl.dead_pixel.telebot.api
-nl.dead_pixel.telebot.api.interfaces
-nl.dead_pixel.telebot.api.plugin
-nl.dead_pixel.telebot.api.retrofit
-nl.dead_pixel.telebot.api.retrofit.answer_bodies
-nl.dead_pixel.telebot.api.retrofit.request_bodies
+nl.dead_pixel.telebot
 nl.dead_pixel.telebot.api.types.chat
 nl.dead_pixel.telebot.api.types.files
 nl.dead_pixel.telebot.api.types.games
@@ -16,3 +11,8 @@ nl.dead_pixel.telebot.api.types.keyboard.helpers
 nl.dead_pixel.telebot.api.types.keyboard.markups
 nl.dead_pixel.telebot.api.types.misc
 nl.dead_pixel.telebot.api.types.payment
+nl.dead_pixel.telebot.interfaces
+nl.dead_pixel.telebot.plugin
+nl.dead_pixel.telebot.retrofit
+nl.dead_pixel.telebot.retrofit.answer_bodies
+nl.dead_pixel.telebot.retrofit.request_bodies

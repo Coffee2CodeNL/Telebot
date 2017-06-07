@@ -15,7 +15,7 @@
  */
 package nl.dead_pixel.telebot.api.types.keyboard.markups;
 
-import nl.dead_pixel.telebot.api.interfaces.IReplyMarkup;
+import nl.dead_pixel.telebot.interfaces.IReplyMarkup;
 import nl.dead_pixel.telebot.api.types.keyboard.buttons.InlineKeyboardButton;
 
 import java.util.List;

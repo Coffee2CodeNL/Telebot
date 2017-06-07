@@ -16,7 +16,7 @@
 package nl.dead_pixel.telebot.api.types.files;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import nl.dead_pixel.telebot.api.interfaces.IFile;
+import nl.dead_pixel.telebot.interfaces.IFile;
 
 
 /**

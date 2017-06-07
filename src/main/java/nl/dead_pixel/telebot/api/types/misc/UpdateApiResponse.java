@@ -30,7 +30,7 @@ public class UpdateApiResponse {
     private List<Update> updates = new ArrayList<>();
 
     /**
-     * Gets the result
+     * Gets the result.
      *
      * @return a boolean representing the result
      */

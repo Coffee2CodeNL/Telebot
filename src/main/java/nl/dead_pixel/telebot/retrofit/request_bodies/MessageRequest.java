@@ -13,13 +13,13 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package nl.dead_pixel.telebot.api.retrofit.request_bodies;
+package nl.dead_pixel.telebot.retrofit.request_bodies;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
-import nl.dead_pixel.telebot.api.interfaces.IReplyMarkup;
+import nl.dead_pixel.telebot.interfaces.IReplyMarkup;
 import nl.dead_pixel.telebot.api.types.chat.Message;
 
 import java.util.Optional;

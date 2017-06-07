@@ -15,7 +15,7 @@
  */
 package nl.dead_pixel.telebot.api.types.helpers;
 
-import nl.dead_pixel.telebot.api.interfaces.IUpdate;
+import nl.dead_pixel.telebot.interfaces.IUpdate;
 import nl.dead_pixel.telebot.api.types.chat.Message;
 
 /**

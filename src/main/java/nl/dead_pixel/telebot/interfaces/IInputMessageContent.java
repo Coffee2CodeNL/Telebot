@@ -13,17 +13,13 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package nl.dead_pixel.telebot.api.interfaces;
+package nl.dead_pixel.telebot.interfaces;
 
 /**
- * The interface Plugin.
+ * The interface Input message content.
  *
  * @author ReSco
- * @since 11 :49 6-6-2017
+ * @since 22 :45 2-6-2017
  */
-public interface IPlugin {
-    /**
-     * Subscribe.
-     */
-    void subscribe();
+public interface IInputMessageContent {
 }

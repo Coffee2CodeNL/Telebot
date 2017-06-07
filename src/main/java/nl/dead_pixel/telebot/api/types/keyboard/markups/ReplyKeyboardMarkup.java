@@ -16,7 +16,7 @@
 package nl.dead_pixel.telebot.api.types.keyboard.markups;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import nl.dead_pixel.telebot.api.interfaces.IReplyMarkup;
+import nl.dead_pixel.telebot.interfaces.IReplyMarkup;
 import nl.dead_pixel.telebot.api.types.keyboard.buttons.KeyboardButton;
 
 import java.util.List;

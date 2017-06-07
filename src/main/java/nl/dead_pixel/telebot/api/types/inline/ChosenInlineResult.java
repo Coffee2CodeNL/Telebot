@@ -16,7 +16,7 @@
 package nl.dead_pixel.telebot.api.types.inline;
 
 
-import nl.dead_pixel.telebot.api.interfaces.IUpdate;
+import nl.dead_pixel.telebot.interfaces.IUpdate;
 
 /**
  * The type Chosen inline result.
