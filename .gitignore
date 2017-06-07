@@ -70,5 +70,8 @@ atlassian-ide-plugin.xml
 
 # oh-my-zsh gradle plugin
 .gradletasknamecache
+
+# Custom
 /src/main/java/nl/dead_pixel/telebot/admin_bot/AdminBot.java
 /src/main/java/nl/dead_pixel/telebot/api/updates/UpdatePollService.java
+/misc
