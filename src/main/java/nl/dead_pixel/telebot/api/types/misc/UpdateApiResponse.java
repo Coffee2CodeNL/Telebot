@@ -30,19 +30,19 @@ public class UpdateApiResponse {
     private List<Update> updates = new ArrayList<>();
 
     /**
-     * Gets ok.
+     * Gets the result
      *
-     * @return the ok
+     * @return a boolean representing the result
      */
     public Boolean getOk() {
         return ok;
     }
 
     /**
-     * Sets ok.
+     * Sets the result.
      *
-     * @param ok the ok
-     * @return the ok
+     * @param ok a boolean representing the result
+     * @return the current {@link UpdateApiResponse} instance
      */
     private UpdateApiResponse setOk(Boolean ok) {
         this.ok = ok;
@@ -50,19 +50,19 @@ public class UpdateApiResponse {
     }
 
     /**
-     * Gets result.
+     * Gets a list of {@link Update}s.
      *
-     * @return the result
+     * @return a {@link List} of {@link Update}s
      */
     public List<Update> getUpdates() {
         return updates;
     }
 
     /**
-     * Sets result.
+     * Sets the list of Updates.
      *
-     * @param result the result
-     * @return the result
+     * @param updates the {@link List} of {@link Update}s
+     * @return the current {@link UpdateApiResponse} instance
      */
     private UpdateApiResponse setUpdates(List<Update> updates) {
         this.updates = updates;
