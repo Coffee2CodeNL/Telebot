@@ -56,21 +56,22 @@ license {
     header = file('LICENSE.header')
     strictCheck = true
 }
-
+def deployUsername = hasProperty('ossrhUsername') ? ossrhUsername : System.getenv('ossrhUsername')
+def deployPassword = hasProperty('ossrhPassword') ? ossrhPassword : System.getenv('ossrhPassword')
 uploadArchives {
     repositories.mavenDeployer {
             beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
             repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-                authentication(userName: ossrhUsername, password: ossrhPassword)
+                authentication(userName: deployUsername, password: deployPassword)
             }
 
             snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
-                authentication(userName: ossrhUsername, password: ossrhPassword)
+                authentication(userName: deployUsername, password: deployPassword)
             }
 
             pom.project {
-                name 'Telebot'
+                name 'nl.dead-pixel.telebot:telebot'
                 packaging 'jar'
                 // optionally artifactId can be defined here
                 description 'Java Telegram Bot API Library, Uses RxJava2 and Retrofit'
