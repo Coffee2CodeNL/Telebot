@@ -4,10 +4,10 @@ This library is meant to be used to create Telegram bots with ease, while allowi
 The whole library is based on RxJava2 and Retrofit.
 
 ## Documentation
-
-**This must be called before adding plugins!**  
+  
 1. Initialize the library
-    ```
+    **This must be called before adding plugins!**
+    ```
     Telebot.init(Token, Executors.newFixedThreadPool(4));
     ``` 
     Where the token is a field in your main class:
