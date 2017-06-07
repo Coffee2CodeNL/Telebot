@@ -66,8 +66,8 @@ The same goes for bugs and suggestions.
 
 ## Extras
 #### IntelliJ IDEA Live Template
-```
-public class StickerFilterPlugin extends nl.dead_pixel.telebot.api.plugin.Plugin<$type$> {
+```java
+public class $name$Plugin extends nl.dead_pixel.telebot.api.plugin.Plugin<$type$> {
     @java.lang.Override
     public void pluginBody($type$ update) {
         $SELECTION$
