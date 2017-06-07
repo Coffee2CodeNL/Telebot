@@ -5,8 +5,8 @@ The whole library is based on RxJava2 and Retrofit.
 
 ## Documentation
   
-1. Initialize the library
-    **This must be called before adding plugins!**
+1. Initialize the library  
+    **This must be called before adding plugins!**  
     ```
     Telebot.init(Token, Executors.newFixedThreadPool(4));
     ``` 
