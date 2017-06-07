@@ -35,6 +35,7 @@ javadoc {
     options.links("http://fasterxml.github.io/jackson-core/javadoc/2.8/")
     options.links("http://fasterxml.github.io/jackson-annotations/javadoc/2.8/")
     options.links("http://fasterxml.github.io/jackson-databind/javadoc/2.8/")
+    destinationDir = file('docs')
 }
 
 license {
