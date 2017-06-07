@@ -3,6 +3,14 @@ Java Telegram Bot API Library
 This library is meant to be used to create Telegram bots with ease, while allowing jobs to run in seperate threads.  
 The whole library is based on RxJava2 and Retrofit.
 
+## State of the Library
+This library is currently at version 0.2.0.  
+Most of the Javadocs have been auto-generated and are in need of fixing.
+I do **NOT** deem it stable, but it's in a state that it can actually receive and send messages, and use most methods defined in the API.
+
+If you have any questions, feel free to make an [Issue](https://github.com/iSDP/Telebot/issues/new).  
+The same goes for bugs and suggestions.
+
 ## Documentation
   
 1. Initialize the library  
