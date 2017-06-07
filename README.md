@@ -1,4 +1,4 @@
-Java Telegram Bot API Library
+Java Telegram Bot API Library [![Build Status](https://travis-ci.org/iSDP/Telebot.svg?branch=master)](https://travis-ci.org/iSDP/Telebot)
 =======
 This library is meant to be used to create Telegram bots with ease, while allowing jobs to run in seperate threads.  
 The whole library is based on RxJava2 and Retrofit.
