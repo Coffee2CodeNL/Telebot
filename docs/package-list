@@ -1,5 +1,3 @@
-nl.dead_pixel.telebot.admin_bot
-nl.dead_pixel.telebot.admin_bot.plugins
 nl.dead_pixel.telebot.api
 nl.dead_pixel.telebot.api.interfaces
 nl.dead_pixel.telebot.api.plugin
