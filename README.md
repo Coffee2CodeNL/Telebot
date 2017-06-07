@@ -1,7 +1,15 @@
-Java Telegram Bot API Library
+Java Telegram Bot API Library [![Build Status](https://travis-ci.org/iSDP/Telebot.svg?branch=master)](https://travis-ci.org/iSDP/Telebot)
 =======
 This library is meant to be used to create Telegram bots with ease, while allowing jobs to run in seperate threads.  
 The whole library is based on RxJava2 and Retrofit.
+
+## State of the Library
+This library is currently at version 0.2.0.  
+Most of the Javadocs have been auto-generated and are in need of fixing.  
+I do **NOT** deem it stable, but it's in a state that it can actually receive and send messages, and use most [methods defined in the API](https://github.com/iSDP/Telebot/blob/master/src/main/java/nl/dead_pixel/telebot/api/retrofit/TelegramBotApiService.java).
+
+If you have any questions, feel free to make an [Issue](https://github.com/iSDP/Telebot/issues/new).  
+The same goes for bugs and suggestions.
 
 ## Documentation
   
@@ -57,9 +65,9 @@ The whole library is based on RxJava2 and Retrofit.
     ```
 
 ## Extras
-*For IntelliJ IDEA users, here's a Live Template!*
-```
-public class StickerFilterPlugin extends nl.dead_pixel.telebot.api.plugin.Plugin<$type$> {
+#### IntelliJ IDEA Live Template
+```java
+public class $name$Plugin extends nl.dead_pixel.telebot.api.plugin.Plugin<$type$> {
     @java.lang.Override
     public void pluginBody($type$ update) {
         $SELECTION$
@@ -72,7 +80,8 @@ public class StickerFilterPlugin extends nl.dead_pixel.telebot.api.plugin.Plugin
     }
 }
 ```
-
+#### Javadoc
+[Javadoc](https://isdp.github.io/Telebot/)
 ## Roadmap
 This is a list of the methods and types that still need to be implemented.
 
