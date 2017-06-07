@@ -21,7 +21,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import nl.dead_pixel.telebot.api.interfaces.IReplyMarkup;
 import nl.dead_pixel.telebot.api.types.chat.Message;
-import nl.dead_pixel.telebot.api.types.misc.Update;
 
 import java.util.Optional;
 

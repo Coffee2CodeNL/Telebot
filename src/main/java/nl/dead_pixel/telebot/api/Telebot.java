@@ -1,17 +1,17 @@
 /**
- *    Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
- *
- *    Licensed under the Apache License, Version 2.0 (the "License");
- *    you may not use this file except in compliance with the License.
- *    You may obtain a copy of the License at
- *
- *        http://www.apache.org/licenses/LICENSE-2.0
- *
- *    Unless required by applicable law or agreed to in writing, software
- *    distributed under the License is distributed on an "AS IS" BASIS,
- *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *    See the License for the specific language governing permissions and
- *    limitations under the License.
+ * Copyright (C) 2017 Remon Schopmeijer (79147FFF4E3C86DE) <support-telebot@dead-pixel.nl>
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package nl.dead_pixel.telebot.api;
 
@@ -47,10 +47,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * The type Telebot.
- *
- * @author ReSco
- * @since 10 :50 22-5-2017
+ * The main Telebot Class.
  */
 public class Telebot {
     private static OkHttpClient HttpClient;
@@ -59,7 +56,6 @@ public class Telebot {
     private static String Token;
     private static TelegramBotApiService ApiService;
     private static Observable<IUpdate> UpdateObservable;
-    private static List<IPlugin> Plugins;
     private static ExecutorService ThreadPool;
 
     private Telebot() {
@@ -78,7 +74,6 @@ public class Telebot {
         Mapper = new ObjectMapper();
         Logger = LoggerFactory.getLogger(Telebot.class.getSimpleName());
         Token = token;
-        Plugins = new ArrayList<IPlugin>();
         ThreadPool = threadpool;
         Logger.info("Starting!");
     }
@@ -206,22 +201,50 @@ public class Telebot {
     }
 
     /**
-     * Add plugin.
+     * Gets api service.
      *
-     * @param plugin the plugin
+     * @return the api service
      */
-    public static void addPlugin(IPlugin plugin) {
-        Logger.debug("Adding " + plugin.getClass().getSimpleName().replace("Plugin", "") + " plugin");
-        Plugins.add(plugin);
+    public static TelegramBotApiService getApiService() {
+        return getApiService(false);
     }
 
     /**
-     * Activate plugins.
+     * Gets logger.
+     *
+     * @param clazz the clazz
+     * @return the logger
      */
-    public static void activatePlugins() {
-        for (IPlugin plugin : Plugins) {
-            Logger.info("Activating " + plugin.getClass().getSimpleName().replace("Plugin", "") + " plugin");
-            plugin.subscribe();
+    public static Logger getLogger(Class clazz) {
+        return LoggerFactory.getLogger(clazz.getSimpleName());
+    }
+
+    /**
+     * Plugin Subclass.
+     */
+    public static class Plugins {
+        private List<IPlugin> PluginList = new ArrayList<>();
+
+        /**
+         * Add plugin.
+         *
+         * @param plugin the plugin
+         * @return the plugins
+         */
+        public Plugins addPlugin(IPlugin plugin) {
+            Logger.debug("Adding " + plugin.getClass().getSimpleName().replace("Plugin", "") + " plugin");
+            PluginList.add(plugin);
+            return this;
+        }
+
+        /**
+         * Activate plugins.
+         */
+        public void activatePlugins() {
+            for (IPlugin plugin : PluginList) {
+                Logger.info("Activating " + plugin.getClass().getSimpleName().replace("Plugin", "") + " plugin");
+                plugin.subscribe();
+            }
         }
     }
 }

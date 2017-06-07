@@ -24,9 +24,6 @@ import java.util.Optional;
 
 /**
  * The type Inline query result article.
- *
- * @author ReSco
- * @since 22 :34 2-6-2017
  */
 public class InlineQueryResultArticle implements IInlineQueryResult {
     @JsonProperty("type")

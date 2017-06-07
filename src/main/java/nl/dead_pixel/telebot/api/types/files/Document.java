@@ -19,7 +19,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import nl.dead_pixel.telebot.api.interfaces.IFile;
 
 /**
- * Created by resco on 22-5-2017.
+ * Document type
+ * <p>
+ * Created by @iSDP on 22-5-2017
  */
 public class Document implements IFile {
     @JsonProperty("file_id")

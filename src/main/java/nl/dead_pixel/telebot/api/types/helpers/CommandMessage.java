@@ -17,6 +17,9 @@ package nl.dead_pixel.telebot.api.types.helpers;
 
 import nl.dead_pixel.telebot.api.interfaces.IUpdate;
 import nl.dead_pixel.telebot.api.types.chat.Message;
+import nl.dead_pixel.telebot.api.types.chat.MessageEntity;
+
+import java.util.List;
 
 /**
  * The type Command message.
@@ -37,11 +40,39 @@ public class CommandMessage implements IUpdate {
     }
 
     /**
-     * Gets message.
+     * Gets the raw message.
      *
      * @return the message
      */
     public Message getMessage() {
         return this.message;
+    }
+
+    /**
+     * Extracts the Command from a message.
+     *
+     * @return The command
+     */
+    public String getCommand() {
+        String messageText = message.getText();
+        List<MessageEntity> messageEntities = message.getEntities();
+        for (MessageEntity messageEntity : messageEntities) {
+            if (messageEntity.getOffset() == 0) {
+                String command = messageText.substring(
+                        messageEntity.getOffset().intValue() + 1,
+                        messageEntity.getOffset().intValue() + messageEntity.getLength().intValue()).toLowerCase();
+                return command.replaceAll("@[a-zA-Z]+(Bot|bot)", "");
+            }
+        }
+        return "";
+    }
+
+    /**
+     * Returns the Chat ID for this command.
+     *
+     * @return The Chat ID
+     */
+    public Long getChatId() {
+        return message.getChat().getId();
     }
 }

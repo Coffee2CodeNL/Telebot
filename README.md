@@ -12,19 +12,36 @@ If you have any questions, feel free to make an [Issue](https://github.com/iSDP/
 The same goes for bugs and suggestions.
 
 ## Documentation
-  
+#### Code sample
+```java
+public class ExampleBot {
+    private final static String TOKEN = "<Token Here>";
+
+    public static void main(String[] args) {
+        org.slf4j.Logger logger = LoggerFactory.getLogger(ExampleBot.class.getSimpleName());
+        Telebot.init(TOKEN, Executors.newFixedThreadPool(4));
+        Telebot.Plugins plugins = new Telebot.Plugins();
+        plugins.addPlugin(new ExamplePlugin())
+                .addPlugin(new AnotherExamplePlugin())
+                .activatePlugins();
+        logger.info("Activated Plugins");
+    }
+}
+```
+#### Explained step by step
 1. Initialize the library  
     **This must be called before adding plugins!**  
     ```
-    Telebot.init(Token, Executors.newFixedThreadPool(4));
+    Telebot.init(TOKEN, Executors.newFixedThreadPool(4));
     ```
 
     Where the token is a field in your main class:
-    `private static final String Token = "<Token here>"` 
+    `private static final String TOKEN = "<Token here>"` 
 
 2. After that you can start adding Plugins, The main method of using this library, and also the recommended one.
 
-    Create a package named `plugins` and add classes like the following example
+    Create a package named `plugins` and add classes like the following example.  
+    There are some premade plugins below you could use for testing.
     
     ##### Plugin Class Example
     ```java
@@ -82,6 +99,38 @@ public class $name$Plugin extends nl.dead_pixel.telebot.api.plugin.Plugin<$type$
 ```
 #### Javadoc
 [Javadoc](https://isdp.github.io/Telebot/)
+
+## Plugins
+#### Ping Plugin
+```java
+public class PingPlugin extends Plugin<CommandMessage> {
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void pluginBody(CommandMessage commandMessage) {
+        if (commandMessage.getCommand().equals("")) return;
+
+        if (commandMessage.getCommand().equals("ping")) {
+            log("Received command: ping");
+            MessageRequest messageRequest = new MessageRequest.Builder(commandMessage.getChatId())
+                    .replyTo(commandMessage.getMessage())
+                    .text("Pong!")
+                    .create();
+            ApiService.sendMessage(messageRequest).subscribe(messageApiResponse -> log("Pong sent? " + messageApiResponse.getOk()), Throwable::printStackTrace);
+        }
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Class<CommandMessage> pluginUpdateType() {
+        return CommandMessage.class;
+    }
+}
+```
+
 ## Roadmap
 This is a list of the methods and types that still need to be implemented.
 

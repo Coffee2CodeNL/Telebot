@@ -58,6 +58,12 @@ public class Update {
         return updateId;
     }
 
+    /**
+     * Sets the Update ID.
+     *
+     * @param updateId The update ID
+     * @return the current {@link Update} instance
+     */
     private Update setUpdateId(Long updateId) {
         this.updateId = updateId;
         return this;

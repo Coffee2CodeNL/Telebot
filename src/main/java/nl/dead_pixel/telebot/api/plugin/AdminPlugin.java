@@ -15,13 +15,17 @@
  */
 package nl.dead_pixel.telebot.api.plugin;
 
-import nl.dead_pixel.telebot.api.interfaces.IPlugin;
-
 /**
- * The type Admin plugin.
- *
- * @author ReSco
- * @since 11 :49 6-6-2017
+ * The AdminPlugin type.
  */
-public abstract class AdminPlugin implements IPlugin {
+public abstract class AdminPlugin extends Plugin {
+    protected AdminPlugin(Class clazz) {
+        super(clazz);
+    }
+
+    @Override
+    public void subscribe() {
+        // TODO: Add authorization logic here.
+        super.subscribe();
+    }
 }

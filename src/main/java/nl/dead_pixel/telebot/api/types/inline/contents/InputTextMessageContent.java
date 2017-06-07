@@ -15,11 +15,12 @@
  */
 package nl.dead_pixel.telebot.api.types.inline.contents;
 
+
+import nl.dead_pixel.telebot.api.interfaces.IInputMessageContent;
+
 /**
- * The type Input text message content.
- *
- * @author ReSco
- * @since 22 :46 2-6-2017
+ * InputTextMessageContent object.
  */
-public class InputTextMessageContent {
+public class InputTextMessageContent implements IInputMessageContent {
+
 }
