@@ -7,7 +7,7 @@ The whole library is based on RxJava2 and Retrofit.
   
 1. Initialize the library  
     **This must be called before adding plugins!**  
-    ```
+    ```java
     Telebot.init(Token, Executors.newFixedThreadPool(4));
     ```
 
@@ -47,12 +47,12 @@ The whole library is based on RxJava2 and Retrofit.
     - `ShippingQuery`, An Shipping Query
 
 3. You can then add the plugin to the library:
-    ```
+    ```java
     Telebot.addPlugin(new ExamplePlugin());
     ```
 
 4. After you've finished adding the plugins, call the following method:
-    ```
+    ```java
     Telebot.activatePlugins();
     ```
 
