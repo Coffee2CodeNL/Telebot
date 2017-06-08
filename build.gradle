@@ -38,6 +38,7 @@ task generateDocs(type: Javadoc) {
     options.links("https://fasterxml.github.io/jackson-core/javadoc/2.8/")
     options.links("https://fasterxml.github.io/jackson-annotations/javadoc/2.8/")
     options.links("https://fasterxml.github.io/jackson-databind/javadoc/2.8/")
+    options.links("https://www.slf4j.org/apidocs/")
     destinationDir = file('docs')
     exclude '**/admin_bot/**'
     finalizedBy 'copyStylesheet'
