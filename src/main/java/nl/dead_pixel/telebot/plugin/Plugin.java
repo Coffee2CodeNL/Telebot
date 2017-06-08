@@ -53,7 +53,7 @@ public abstract class Plugin<U> implements IPlugin {
      * Used to attach Plugins to the API.
      */
     public void subscribe() {
-        Telebot.getUpdateObservable().ofType(pluginUpdateType()).subscribe(this::pluginBody);
+        Telebot.getUpdateObservable().ofType(pluginUpdateType()).subscribe(this::pluginBody, Throwable::printStackTrace);
     }
 
     /**
