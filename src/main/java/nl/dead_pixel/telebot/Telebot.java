@@ -196,7 +196,7 @@ public class Telebot {
             Retrofit retrofit = retrofitBuilder.build();
             ApiService = retrofit.create(TelegramBotApiService.class);
         }
-        Logger.info("Returning ApiService instance.");
+        Logger.debug("Returning ApiService instance.");
         return ApiService;
     }
 

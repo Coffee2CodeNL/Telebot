@@ -29,6 +29,7 @@ public class Video implements IFile {
     private Long height;
     private Long duration;
     private PhotoSize thumb;
+    @JsonProperty("mime_type")
     private String mimeType;
     @JsonProperty("file_size")
     private Long fileSize;

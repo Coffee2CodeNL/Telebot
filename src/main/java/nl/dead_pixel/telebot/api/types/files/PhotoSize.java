@@ -29,6 +29,8 @@ public class PhotoSize implements IFile {
     private Long height;
     @JsonProperty("file_size")
     private Long fileSize;
+    @JsonProperty("file_path")
+    private String filePath;
 
     /**
      * Gets file id.
@@ -107,6 +109,21 @@ public class PhotoSize implements IFile {
      */
     private PhotoSize setFileSize(Long fileSize) {
         this.fileSize = fileSize;
+        return this;
+    }
+
+    /**
+     * Gets file path.
+     *
+     * @return the file path
+     */
+    @Deprecated
+    public String getFilePath() {
+        return filePath;
+    }
+
+    private PhotoSize setFilePath(String filePath) {
+        this.filePath = filePath;
         return this;
     }
 }
