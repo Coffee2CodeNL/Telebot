@@ -8,6 +8,9 @@ The whole library is based on RxJava2 and Retrofit.
 compile 'nl.dead-pixel.telebot:telebot:0.3.3'
 ```
 
+## Patreon
+If you feel like it, please take a look at my [Patreon Page](https://www.patreon.com/Coffee2Code)
+
 ## State of the Library
 This library is currently at version 0.3.3.  
 Most of the Javadocs have been auto-generated and are in need of fixing.  
