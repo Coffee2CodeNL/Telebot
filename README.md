@@ -11,6 +11,9 @@ compile 'nl.dead-pixel.telebot:telebot:0.3.3'
 ## Patreon
 If you feel like it, please take a look at my [Patreon Page](https://www.patreon.com/Coffee2Code)
 
+## How to get support
+[Join the Discord Server](https://discord.gg/KX5n5AM)
+
 ## State of the Library
 This library is currently at version 0.3.3.  
 Most of the Javadocs have been auto-generated and are in need of fixing.  
